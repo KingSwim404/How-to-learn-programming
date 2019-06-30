@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+        p{
+            width: 200px;
+            height: 50px;
+            font-size: 27px;
+            color: lightblue;
+            background: black;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<p>KingSwim</p>
+</body>
+<script>
+
+    function getFactorial(x) {
+        var factorial = 1;
+        for (var i = 1; i <= x; i = i + 1) {
+            factorial = factorial * i;
+        }
+        return factorial;
+    }
+
+    var factorial = getFactorial(7);
+    //弹框
+    alert(factorial);
+</script>
+</html>
