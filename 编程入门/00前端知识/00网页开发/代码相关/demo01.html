@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 这个是注释,用于解释只用，不影响程序。 -->
+<!-- 1、显示一个文本段落 -->
+<p>KingSwim
+
+
+<!-- 2、显示一张图片 -->
+<!--
+    标签内部的叫做属性：src、alt；
+    src：图片路径
+    alt: 图片加载不出来的时候显示的文本
+-->
+<!-- 网络图片 -->
+<img src="https://www.kingswim.xyz/xyz/img/kingswim.png" alt="KingSwim的头像">
+<!--本地图片-->
+<img src="imgs/fish.jpg" alt="微信读书App">
+<img src="../../../../imgs/weixindushu.png" alt="微信读书App">
+<!--
+  相对路径怎么写？
+  ".." 意思是返回上一层级目录
+      demo01.html的完整路径为：How-to-learn-programming/编程入门/00前端知识/00网页开发/代码相关/demo01.html;
+         fish.jpg的完整路径为：How-to-learn-programming/编程入门/00前端知识/00网页开发/代码相关/imgs/fish.jpg
+  weixindushu.png的完整路径为：How-to-learn-programming/imgs/weixindushu.png;
+
+       因为,imgs/fish.jpg和demo01.html在同一层级，所以可以直接访问。
+       然而,weixindushu.png和demo01.html相隔多个层级，先使用"../../../../"就和“imgs/weixindushu.png”在同一级目录，就可以直接访问。
+  -->
+
+
+<!-- 3、超链接 -->
+<!--
+      href: 链接路径（一样支持本地路径）
+    target：链接打开方式；_blank——在新标签页打开、_self——在当前签页打开；
+  -->
+<a href="https://www.kingswim.xyz/">KingSwim的官网</a>
+<a href="https://www.kingswim.xyz/" target="_blank">KingSwim的官网_blank</a>
+<a href="https://www.kingswim.xyz/" target="_self">KingSwim的官网_self</a>
+
+<!-- 4、容器标签，用于划分区域 -->
+<div>KingSwim</div>
+<div>
+    <p>KingSwim</p>
+    <a href="https://www.kingswim.xyz/">KingSwim的官网</a>
+    <a href="https://www.kingswim.xyz/">KingSwim的官网</a>
+</div>
+</body>
+</html>

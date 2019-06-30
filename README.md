@@ -19,8 +19,9 @@
 
 - 一台电脑、两个显示器。请你无论如何准备 两个显示器，这会提高你的学习效率，很高的那种。同时也是节约我的时间。
 - 在条件允许的情况下把浏览器的默认搜索引擎改为[谷歌](https://www.google.com/)，没有条件请改为[必应](https://cn.bing.com/)，切忌千万不要使用百度。当然如果某天百度符合了程序员的要求，我还是愿意推荐它。
-- 软件的下载、安装、文件解压、基本DOS命令（进入文件目录，cd命令），希望你会。不会那就看我的视频吧，都是很简单的操作。
-
+- 软件的下载、安装、文件解压、基本DOS命令（进入文件目录，cd命令）希望你会。不会那就看我的视频吧，都是很简单的操作，还是建议先自己搜索了解一下。
+- 申请一个[github](https://github.com/)账户，你可以先不知道怎么用，后续我会抽时间讲解一下基本用法。
+- 大部分教程都有一个自练习部分。自己先试试看，不会就搜索引擎，还是有问题就去[github](https://github.com/KingSwim404/How-to-learn-programming/)提[issue](https://github.com/KingSwim404/How-to-learn-programming/issues)。
 ## 五、其他的一些说明：
 
 - 编程入门一点也不难，之所以有人觉得难在于：
@@ -38,5 +39,7 @@
 - 称呼 : KingSwim
 
 - 邮箱：KingSwim404@163.com
+
+  教程问题希望优先提[issue](https://github.com/KingSwim404/How-to-learn-programming/issues)
 
   
