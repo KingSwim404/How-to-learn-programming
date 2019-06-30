@@ -36,7 +36,7 @@
 
 ## 六、本人的联系方式：
 
-- 称呼 : KingSwim
+- 称呼：KingSwim
 
 - 邮箱：KingSwim404@163.com
 
