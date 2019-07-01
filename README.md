@@ -46,7 +46,7 @@
 
 - 所有原创文章(未进行特殊标识的均属于原创) 的著作权属于 **KingSwim**。
 - 除注明外，所有文章均采用
-  [Creative Commons BY-NC-ND 4.0（自由转载-保持署名-非商用-禁止演绎）](http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)协议发布;代码遵循[MIT]([LICENSE)协议。
+  [Creative Commons BY-NC-ND 4.0（自由转载-保持署名-非商用-禁止演绎）](http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)协议发布;代码遵循[MIT](LICENSE)协议。
 - 所有转载文章(标题注明**`[转]`**的所有文章) 的著作权属于原作者。
   
   你可以在非商业的前提下免费转载，但请你遵守如下原则：
