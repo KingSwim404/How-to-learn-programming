@@ -9,7 +9,7 @@
    <!-- 1、显示一个文本段落 -->
    <p>KingSwim</p>
    <!-- 2、显示一张图片 -->
-   <img src="https://www.kingswim.xyz/xyz/img/kingswim.png" alt="KingSwim的头像">
+   <img src="https://www.kingswim.xyz/xyz/img/kingswim.png" alt="KingSwim的头像"/>
    <!-- 3、超链接 -->
    <a href="https://www.kingswim.xyz/">KingSwim的官网</a>
    <!-- 4、容器标签，用于划分区域 -->
@@ -27,7 +27,7 @@
 
    请记住下面几条规范即可：
 
-   - 大部分标签都需要闭合，也可以认为所有的都要闭合。
+   - 标签都需要闭合。
 
      ```html
      <p></p>   (正确)
