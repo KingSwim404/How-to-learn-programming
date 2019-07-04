@@ -8,18 +8,25 @@
         p {
             /*css 的注释写法*/
             /*宽*/
-            width: 100px;
+            width: 200px;
             /*高*/
             height: 50px;
             /*文本大小*/
             font-size: 26px;
             /*文本颜色*/
             color: blue;
+            /*背景颜色*/
+            background: black;
         }
         /*
             其实以上代码代表控制所有p标签的，你会发现所有的p标签都应用了以上CSS。
-            显然这样不好。有的时候我需要《KingSwim1》的文本是红色，怎么办？
+            显然这样不好。有的时候我需要:
+            1、"KingSwim1"的文本是红色，怎么办？
+            2、"KingSwim3"、"KingSwim4"的文本是绿色，怎么办？
             这个时候就引出了另一个知识点：CSS选择器。
+
+            注意：如果你的代码没有出效果。请看你是不是少了"："或者";"或者“{}”
+                 CSS比HTML要严格一些。
         */
     </style>
 </head>
@@ -29,6 +36,8 @@
 <p>KingSwim0</p>
 <p>KingSwim1</p>
 <p>KingSwim2</p>
+<p>KingSwim3</p>
+<p>KingSwim4</p>
 <div>KingSwim3</div>
 
 </body>
