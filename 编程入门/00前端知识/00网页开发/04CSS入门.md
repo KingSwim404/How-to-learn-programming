@@ -68,20 +68,23 @@
 
      注意：id整个HTML页面要唯一。当然，你可以不遵守，但是一定要遵守。先记住这个，后续会知道理由。
 
+     格式：#+id名 {    }
+   
      ```html
      <p id="red_text">KingSwim1</p>
-     #red_text{ color: red;}
+  #red_text{ color: red;}
      ```
 
    - class选择器：指定某一些标签
-
+   
      格式：. + class名 {  } 
      
      ```html
      <p class="green_text" >KingSwim3</p>
      <p class="green_text" >KingSwim4</p>
-     .green_text{color: green;}
+     .green_text{color: green;}	
      ```
      
+   - 父子选择器
+   
      
-
