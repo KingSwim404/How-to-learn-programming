@@ -88,62 +88,61 @@
     #red_text{ color: red;}
      ```
   
-   - class选择器：指定某一些标签
-  
-     格式：. + class名 {  } 
-     
+ - class选择器：指定某一些标签
+
+   格式：. + class名 {  } 
+   
+   ```html
+   <p class="green_text" >KingSwim3</p>
+   <p class="green_text" >KingSwim4</p>
+   .green_text{color: green;}	
+   ```
+   
+ - 父子选择器：（这个很重要，后续会经常用到——很方便）
+
+   先说几个概念：
+
+   父元素、子元素、直接父元素、直接子元素。
+   怎么分辨这几个概念：请看[示例详细代码04](代码相关/demo04.html)
+   父子选择器代码详细示例：[示例详细代码05](代码相关/demo05.html)
+
      ```html
-     <p class="green_text" >KingSwim3</p>
-     <p class="green_text" >KingSwim4</p>
-     .green_text{color: green;}	
+     <div id="div0">
+         <p id="p0">p0</p>
+         <p id="p1">p1</p>
+         <div id="div1">
+           <p id="p2">p2</p>
+         </div>
+     </div>
      ```
-     
-   - 父子选择器：（这个很重要，后续会经常用到——很方便）
-  
-     先说几个概念：
-     
-     父元素、子元素、直接父元素、直接子元素。
-     怎么分辨这几个概念：请看[示例详细代码04](代码相关/demo04.html)
-     父子选择器代码详细示例：[示例详细代码05](代码相关/demo05.html)
-  
-       ```html
-       <div id="div0">
-           <p id="p0">p0</p>
-           <p id="p1">p1</p>
-           <div id="div1">
-             <p id="p2">p2</p>
-           </div>
-       </div>
-       ```
-  
-     - 子选择器
-  
-       格式： 父+空格+子{  }
-  
-       代码示例：
-  
-       ```html
-       <style>
-            #div0 p{
-                 color: blue;
-             }
-       </style>
-       ```
-  
-     - 直接子选择器
-     
-       格式： 父+>+子{   }
-     
-       代码示例：
-  
-       ```html
-       <style>
-            #div0>p{
-                 color: red;
-             }
-       </style>
-       ```
-  
+
+   - 子选择器
+
+     格式： 父+空格+子{  }
+
+     代码示例：
+
+     ```html
+     <style>
+          #div0 p{
+               color: blue;
+           }
+     </style>
+     ```
+
+   - 直接子选择器
+
+     格式： 父+>+子{   }
+
+     代码示例：
+
+     ```html
+     <style>
+          #div0>p{
+               color: red;
+           }
+     </style>
+     ```
 4. 自练习
 
    - 尝试一下此种格式的CSS选择器 xxx yyy zzz和xxx>yyy>zzz是否符合你的预期。
