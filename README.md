@@ -92,6 +92,6 @@
 
   官方唯一指定交流社区(免费)：
   
-  <img src="imgs/zsxq/xbc.png" style="width:250px; float:left;"/>
+  <img src="imgs/zsxq/xbc.png" style="width:200px; float:left;"/>
   
   
