@@ -19,7 +19,7 @@
             background: black;
         }
         /*
-            其实以上代码代表控制所有p标签的，你会发现所有的p标签都应用了以上CSS。
+            以上代码代表控制所有p标签的，你会发现所有的p标签都应用了以上CSS。
             显然这样不好。有的时候我需要:
             1、"KingSwim1"的文本是红色，怎么办？
             2、"KingSwim3"、"KingSwim4"的文本是绿色，怎么办？
@@ -28,6 +28,11 @@
             注意：如果你的代码没有出效果。请看你是不是少了"："或者";"或者“{}”
                  CSS比HTML要严格一些。
         */
+
+        img{
+            /*图片一般宽、高只要设置一个就可以了。原因：会默认按比例缩放*/
+            width: 200px;
+        }
     </style>
 </head>
 
@@ -39,6 +44,8 @@
 <p>KingSwim3</p>
 <p>KingSwim4</p>
 <div>KingSwim3</div>
+
+<img src="imgs/fish.jpg" alt="微信读书App"/>
 
 </body>
 </html>
