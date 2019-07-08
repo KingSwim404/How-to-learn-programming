@@ -86,7 +86,7 @@
 
 - 称呼：KingSwim
 
-- 邮箱：KingSwim404@163.com
+- 邮箱：kingswim404@gmail.com
 
   教程问题希望优先提[issue](https://github.com/KingSwim404/How-to-learn-programming/issues)
 
