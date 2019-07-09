@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*默认会有间隙，而不是紧贴界面的左上角。
+          原因：标签会默认自带一些属性，一般使用如下方式去掉这些属性。
+         */
+
+         /* "*"号的含义：指代任意标签。     */
+         *{
+             /*外边距设置为0；值为0的时候可以不用单位。*/
+             margin: 0;
+             /*margin: 0px;*/
+         }
+
+        /*以下代码就可以显示正常显示在左上角*/
+        #div00{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<div id="div00" >
+</div>
+
+
+</body>
+</html>

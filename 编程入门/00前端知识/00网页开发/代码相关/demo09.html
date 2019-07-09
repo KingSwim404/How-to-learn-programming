@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         *{
+             /*距离四个方向都是 0 */
+             margin: 0;
+         }
+         /* margin 有四个方向：left 、right 、top、bottom ；
+            left、top就相当于坐标系的（x，y)，用来定具体位置;
+            值可以是负数，负数就会跑出界面。可以自己试试。
+            没有指定方向，值就是 0 ；
+
+         */
+        #div00{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            /*距离顶部 100px*/
+            margin-top: 100px;
+            /*距离左边 100px*/
+            margin-left: 100px;
+            /*距离右边 100px （看不出效果） */
+            margin-right: 100px;
+            /*距离底部 100px （看不出效果）*/
+            margin-bottom: 100px;
+        }
+
+        /*
+           margin 还有 2 种 复合写法
+        */
+         #div00{
+
+             margin: 100px;
+             /*
+             相当于：所有方向 100px
+             margin-top: 100px;
+             margin-left: 100px;
+             margin-right: 100px;
+             margin-bottom: 100px;
+             */
+         }
+
+         #div00{
+
+             margin: 100px 200px;
+             /*
+             相当于：上下 100px ; 左右 200px
+             margin-top: 100px;
+             margin-left: 200px;
+             margin-right: 200px;
+             margin-bottom: 100px;
+             */
+         }
+
+         #div00{
+
+             margin: 100px 200px 300px 400px;
+             /*
+             相当于：上:100px ; 右:200px ; 下:300px ; 左:400px （逆时针）
+             margin-top: 100px;
+             margin-left: 400px;
+             margin-right: 200px;
+             margin-bottom: 300px;
+             */
+         }
+    </style>
+</head>
+<body>
+
+
+
+<div id="div00" >
+</div>
+
+
+</body>
+</html>
