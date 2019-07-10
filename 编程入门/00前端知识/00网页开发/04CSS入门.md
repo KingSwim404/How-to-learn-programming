@@ -1,6 +1,7 @@
 # CSS入门（实践课）
 
-1. 学习必要的CSS属性：
+1. ### 学习必要的CSS属性：
+   
    [示例详细代码02](代码相关/demo02.html)
    
    ```html
@@ -36,7 +37,7 @@
        </style>
    ```
    
-2. CSS的规范
+2. ### CSS的规范
    
    CSS相对HTML来说要严谨的多。如果，写错了，页面上就不会有效果。
 
@@ -63,8 +64,7 @@
      
      
    
-3. 学习必要的[CSS 选择器](http://www.w3school.com.cn/cssref/css_selectors.asp) ：
-   
+3. ### 学习必要的[CSS 选择器](http://www.w3school.com.cn/cssref/css_selectors.asp) ：
 
  [示例详细代码03](代码相关/demo03.html)
 
@@ -143,7 +143,7 @@
            }
      </style>
      ```
-4. 自练习
+4. ### 自练习
 
    - 尝试一下此种格式的CSS选择器 xxx yyy zzz和xxx>yyy>zzz是否符合你的预期。
    - 预习一下RGB代表哪几种颜色。
