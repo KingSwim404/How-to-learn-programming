@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            /* 所有 div 都设置成：绝对定位，就不单独设置了。*/
+            position: absolute;
+        }
+        
+        /*注意：9 大定位点的写法有很多种，我这边只教一种。这种很好理解和记忆，后续可以自学其他方式。*/
+        #left_top{
+            /*默认就是左上*/
+        }
+
+        #top_mid{
+            /*类似margin.但是必须要和position属性配合使用*/
+            left: 50%;/*此百分比，对应的是父元素50%*/
+            top: 0;
+            transform: translate(-50%, 0) ;/*此百分比，对应的是自身的50%*/
+        }
+
+        #right_top{
+            right: 0;
+            top: 0;
+        }
+
+        #left_mid{
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%) ;
+        }
+
+
+        #mid_mid{
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) ;
+        }
+
+
+
+        #right_mid{
+            /*自行完成*/
+        }
+
+        #left_bottom{
+            /*自行完成*/
+        }
+
+        #bottom_mid{
+            /*自行完成*/
+        }
+
+        #right_bottom{
+            /*自行完成*/
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="left_top" ></div>
+
+<div id="top_mid" ></div>
+
+<div id="right_top" ></div>
+
+
+<div id="left_mid" ></div>
+
+<div id="mid_mid" ></div>
+
+<div id="right_mid" ></div>
+
+
+<div id="left_bottom" ></div>
+
+<div id="bottom_mid" ></div>
+
+<div id="right_bottom" ></div>
+
+
+
+</body>
+</html>

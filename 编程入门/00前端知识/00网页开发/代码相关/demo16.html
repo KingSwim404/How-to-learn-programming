@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        /*一般，子标签要相对父标签定位，父标签上面一般要使用：position: relative;
+          否则，就会脱离父标签的范围，相对整个界面定位。（接下来就会，单独讲解"绝对定位"和"相对定位"的使用场景。）
+
+
+          真实情况是：
+          绝对定位：到底相对谁？
+          由自己往外层一层一层的找。直到遇到带有position属性的父元素，那么他就相对于这个父元素。(后续父元素即使有，也没用——就近原则)
+          假如，一直都没有找到，那么就相对于整个界面。
+
+          但是一般：父标签上面一般使用：position: relative;
+          你可以试试父标签上：position: absolute;其实也是可以的——后续会讲解。
+        */
+
+        #father{
+            width: 500px;
+            height: 300px;
+            background: rebeccapurple;
+            margin: 200px;
+            /*相对定位*/
+            position: relative;
+        }
+        #child{
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) ;
+        }
+    </style>
+</head>
+<body>
+
+<div id="father" >
+    <div id="child" ></div>
+</div>
+
+</body>
+</html>

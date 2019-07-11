@@ -7,11 +7,18 @@
         *{
             margin: 0;
         }
-        div{
+
+        #top_mid{
             width: 100px;
             height: 100px;
             background: blue;
-            /*position: absolute;*/
+            /*先设置成绝对定位*/
+            position: absolute;
+            /*类似margin.但是必须要和position属性配合使用*/
+            /*此百分比，对应的是父元素50%*/
+            left: 50%;/*距离父元素左边50%*/
+            top: 0;/*距离父元素顶部 0 */
+            transform: translate(-50%, 0) ;/*此百分比，对应的是自身的50%*/
         }
 
     </style>
@@ -19,11 +26,7 @@
 <body>
 
 
-<div id="left_top" ></div>
-
 <div id="top_mid" ></div>
-
-<div id="right_top" ></div>
 
 
 
