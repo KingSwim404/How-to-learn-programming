@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+        }
+
+
+        /*  相对定位(relative) ：相对的是自己原来的位置  */
+        /*
+          符合上中
+          原因：自己的原来的位置本来就是左上角。
+               所以，按照之前绝对定位（absolute）的写法可以满足要求。
+
+        */
+        .div01{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0) ;
+
+        }
+
+
+        /*
+          不符合上中。
+          原因：由于自己原来的位置在 div01的正下方，不属于左上角。
+               所以，根据相对自己原来的位置定位：还需要往上移动自身的 100%，
+               修改 ： transform: translate(-50%, 0) ; 为 transform: translate(-50%, -100%) ;
+
+        */
+
+        .div02{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0) ;
+            /*自己试一试*/
+            /*transform: translate(-50%, -100%) ; */
+       }
+
+
+        /*
+
+        重点：
+            一般不建议使用"相对定位"来定位自己的位置。
+        */
+
+</style>
+</head>
+<body>
+<div class="div01"></div>
+<div class="div02"></div>
+</body>
+</html>
