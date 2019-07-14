@@ -5,10 +5,11 @@
     <title>Title</title>
     <style>
 
+        /*防止一下标签的CSS默认值影响界面效果。*/
         *{
             margin: 0;
+            padding: 0;
         }
-
 
         #outer{
             width: 400px;
@@ -28,6 +29,131 @@
             background: red;
         }
 
+
+
+
+
+        /*图片要完整显示，宽高必须要设置和图片大小（分辨率）一致*/
+        #div00{
+            width: 561px;
+            height: 533px;
+            background-image: url("imgs/kingswim.png") ;
+        }
+
+
+
+        /*非要调整图片大小，就要使用background-size，调节图片大小*/
+        #div01{
+            width: 200px;
+            height: 200px;
+            background-image: url("imgs/kingswim.png") ;
+            background-size: 200px 200px ;
+        }
+
+
+
+        /*内联元素要先设置成块级元素。不然宽高没有效果*/
+        #span00{
+            width: 100px;
+            height:100px;
+            background-image: url("imgs/kingswim.png");
+            background-size: 100px 100px ;
+            display: block;
+            /*或者如下*/
+            /*display: inline-block;*/
+        }
+
+
+        #p00{
+            width: 200px;
+            height: 50px;
+            /*只能做到文本水平居中，要想垂直居中还要用到下面的属性*/
+            text-align: center;
+            /*这个属性叫做行高：行高设置和高度一致，就会垂直居中。*/
+            line-height: 50px;
+            background: #00FF00;
+        }
+
+
+      /* 设置边框*/
+        #div02{
+            width: 200px;
+            height: 50px;
+            /*边框的宽度：10px，边框的类型solid 实线（其他虚线，点，自行学习），边框的颜色：red*/
+            border: 10px solid red;
+            /*边框的圆角：*/
+            border-radius: 10px;
+        }
+
+
+
+
+       /*
+         元素排成一排，之前学的是： display: inline-block;
+         现在学一个新的属性，也是以后经常用的： float: left;
+       */
+       /*列表排成一行*/
+        #ul0{
+            /*宽度不能小于所有子标签宽度之和，不然子标签就会换行。（亲自试试看）*/
+            width: 250px;
+            height: 50px;
+            background: rebeccapurple;
+        }
+        #ul0>li{
+            width: 50px;
+            height: 50px;
+            background: #0000FF;
+            /*左浮动。（自己试试右浮动看看，特殊情况会有妙用）*/
+            float: left;
+            display: inline-block;
+            list-style: none;
+        }
+
+
+
+        #div03{
+            width: 400px;
+            height: 400px;
+            /*裁剪掉溢出的*/
+            /*overflow: hidden;*/
+            /*可以显示，但是出现拖动条*/
+            overflow: scroll;
+        }
+
+
+
+        /*默认红色*/
+        #div04{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        /*鼠标悬停，背景变成蓝色，移走还原；当然也可以修改其他属性。（自己尝试）*/
+        #div04:hover{
+            background: blue;
+        }
+
+
+
+
+        #div05{
+            width: 400px;
+            height: 400px;
+            background: yellow;
+        }
+
+        #div06{
+            width: 50px;
+            height: 50px;
+            background: green;
+        }
+
+        /*鼠标悬停父元素，子元素背景变成紫色，移走还原；*/
+        #div05:hover>#div06{
+            background: purple;
+        }
+
     </style>
 
 </head>
@@ -38,6 +164,41 @@
     <div id="inner"></div>
 </div>
 
+<div id="div00"></div>
+<div id="div01"></div>
+<span id="span00"></span>
+
+
+<p id="p00">KingSwim</p>
+
+
+
+<div id="div02"></div>
+
+
+<ul id="ul0">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+
+<div id="div03">
+    <img src="imgs/kingswim.png" />
+</div>
+
+
+
+
+<div id="div04"></div>
+
+
+<div id="div05">
+    <div id="div06"></div>
+</div>
 
 
 </body>
