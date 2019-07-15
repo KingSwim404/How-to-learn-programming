@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .div00 {
+            border: 50px solid goldenrod;
+            padding: 50px;
+            background-color: red;
+            /*真实宽度(界面显示)是固定的，设置的width是多少就是多少；不会被内边距和边框所影响。但是，因为宽度固定,设置内边距和边框会挤压内容。*/
+            box-sizing: border-box;
+        }
+
+        .div01 {
+            border: 50px solid olivedrab;
+            padding: 50px;
+            background-color: blue;
+            /*默认是content-box. 真实宽度(界面显示) = width+ pading-left + pading-right + boder-left + boder-right */
+            /*box-sizing: content-box;*/
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="div00"></div>
+
+<div class="div01"></div>
+</body>
+</html>

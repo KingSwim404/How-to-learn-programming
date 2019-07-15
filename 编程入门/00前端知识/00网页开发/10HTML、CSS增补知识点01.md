@@ -6,7 +6,7 @@
 
    - [实体字符](http://www.w3school.com.cn/html/html_entities.asp)
 
-     ```
+     ```html
      HTML多个空格会被识别成一个。
      示例：
      <p>King    Swim</p>   ====>  界面：King Swim
@@ -347,16 +347,68 @@
      </div>
      ```
 
+     总结规则：
      
+     ```css
+     :前面是谁，就是谁监听；大括号前面最近是谁，就是谁改变。
+     #div05:hover>#div06{}
+     :前面是div05，所以监听悬停的是div05； {}前面最近的是div06 ，最后CSS改变的就是div06
+     自己多尝试一下吧。
+     ```
 
 3. ### 盒模型
-
    
+   [示例详细代码22](代码相关/demo22.html)
 
+   学习属性：box-sizing ,
+   
+   ```css
+   /*
+     默认值：不设置就是此种模式。
+     真实宽度(界面显示) = width+ pading-left + pading-right + boder-left + boder-right
+   */
+   box-sizing:content-box;
+   /*
+     真实宽度(界面显示)是固定的，设置的width是多少就是多少；不会被内边距和边框所影响。但是，因为宽度固定,设置内   
+     边距和边框会挤压内容。
+   */
+   box-sizing: border-box;
+   ```
+   
+   ![](代码相关/imgs/box.jpg)
+   
+   ```css
+           * {
+              margin: 0;
+              padding: 0;
+           }
+          div {
+              width: 200px;
+              height: 200px;
+           }
+   
+        .div00 {
+               border: 50px solid goldenrod;
+               padding: 50px;
+               background-color: red;
+               box-sizing: border-box;
+           }
+   
+        .div01 {
+               border: 50px solid olivedrab;
+               padding: 50px;
+               background-color: blue;
+               box-sizing: content-box;
+           }
+   <div class="div00"></div>
+   
+   <div class="div01"></div>
+   ```
+   
 4. ### 总结：
 
    大部分标签都可以当做文本以及图片标签使用。但是，一般请不要这么做。每个标签都有其自身的含义，尽量别乱用。
 
    后续，很少单独列增补知识点。之前的知识点，也会不断在在后续的小练习中继续重复——边做边学——做中学。
-   
+
    下面的教程就开始做一些小练习。

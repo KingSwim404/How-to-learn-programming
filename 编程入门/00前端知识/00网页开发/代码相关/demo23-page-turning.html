@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .content{
+            /*一个px都不能少。(试一试 499px.自己先想一下原因，总结里面会说。)*/
+            width: 500px;
+            /*水平居中*/
+            margin: 100px auto;
+        }
+
+        .content a {
+            width: 30px;
+            height: 30px;
+            border: 1px solid gainsboro;
+            /* 去掉 a标签的下划线 （新属性）*/
+            text-decoration: none;
+            /* 控制a标签在一行 */
+            float: left;
+            text-align: center;
+            /* 行高要和自己设置的高度一致 */
+            line-height: 30px;
+            /*控制页码之间的间距*/
+            margin-right: 8px;
+        }
+        /* 为了避免权重问题 ：css最好是由外向内一层一层写。 */
+        /*  " , "的含义：代表与的意思。  前一页标签和后一页标签的宽度都是 70px。  */
+        .content .previous, .content .next {
+            width: 60px;
+        }
+        /* 监听鼠标悬停 */
+        .content a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="content">
+    <a class="previous" href="#">前一页</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    <a class="next" href="#">后一页</a>
+</div>
+
+</body>
+
+</html>
