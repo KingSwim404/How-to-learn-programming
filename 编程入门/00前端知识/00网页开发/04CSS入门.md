@@ -62,13 +62,11 @@
           花括号括错是一个初学容易犯的错误，而且还不容易发现，代码格千万要规范。    
      ```
      
-     
-   
 3. ### 学习必要的[CSS 选择器](http://www.w3school.com.cn/cssref/css_selectors.asp) ：
 
- [示例详细代码03](代码相关/demo03.html)
+   [示例详细代码03](代码相关/demo03.html)
 
-- 标签选择器：指定某种标签；
+   - 标签选择器：指定某种标签；
   
      格式：标签名 {    }
      
@@ -77,34 +75,34 @@
      p{color: orange;}
      ```
      
-- id选择器：指定某一个标签；
+   - id选择器：指定某一个标签；
   
-  注意：id整个HTML页面要唯一。当然，你可以不遵守，但是一定要遵守。先记住这个，后续会知道理由。
+     注意：id整个HTML页面要唯一。当然，你可以不遵守，但是一定要遵守。先记住这个，后续会知道理由。
   
      格式：#+id名 {    }
   
      ```html
      <p id="red_text">KingSwim1</p>
-    #red_text{ color: red;}
+      #red_text{ color: red;}
      ```
   
- - class选择器：指定某一些标签
+   - class选择器：指定某一些标签
 
-   格式：. + class名 {  } 
+     格式：. + class名 {  } 
    
-   ```html
-   <p class="green_text" >KingSwim3</p>
-   <p class="green_text" >KingSwim4</p>
-   .green_text{color: green;}	
-   ```
+     ```html
+     <p class="green_text" >KingSwim3</p>
+     <p class="green_text" >KingSwim4</p>
+     .green_text{color: green;}	
+     ```
    
- - 父子选择器：（这个很重要，后续会经常用到——很方便）
+   - 父子选择器：（这个很重要，后续会经常用到——很方便）
 
-   先说几个概念：
+     先说几个概念：
 
-   父元素、子元素、直接父元素、直接子元素。
-   怎么分辨这几个概念：请看[示例详细代码04](代码相关/demo04.html)
-   父子选择器代码详细示例：[示例详细代码05](代码相关/demo05.html)
+     父元素、子元素、直接父元素、直接子元素。
+     怎么分辨这几个概念：请看[示例详细代码04](代码相关/demo04.html)
+     父子选择器代码详细示例：[示例详细代码05](代码相关/demo05.html)
 
      ```html
      <div id="div0">
@@ -116,33 +114,33 @@
      </div>
      ```
 
-   - 子选择器
+     - 子选择器
 
-     格式： 父+空格+子{  }
+       格式： 父+空格+子{  }
 
-     代码示例：
+       代码示例：
 
-     ```html
-     <style>
+       ```html
+       <style>
           #div0 p{
                color: blue;
            }
-     </style>
-     ```
+       </style>
+       ```
 
-   - 直接子选择器
+     - 直接子选择器
 
-     格式： 父+>+子{   }
+       格式： 父+>+子{   }
 
-     代码示例：
+       代码示例：
 
-     ```html
-     <style>
+       ```html
+       <style>
           #div0>p{
                color: red;
            }
-     </style>
-     ```
+       </style>
+       ```
 4. ### 自练习
 
    - 尝试一下此种格式的CSS选择器 xxx yyy zzz和xxx>yyy>zzz是否符合你的预期。
