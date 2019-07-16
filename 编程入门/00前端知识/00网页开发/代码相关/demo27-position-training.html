@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        /*
+        复习定位使用规则：
+
+        自己相对哪个父标签定位置，就给哪个父标签设置——相对定位（relative），自己设置绝对定位（absolute）；
+        特例：如果只是在自己的左右上下稍微调整一下位置。那就可以使用相对定位（relative）进行微调。
+
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            /*
+             不设置宽度，无法水平居中
+             div宽度默认占满一行。
+            */
+            width: 645px;
+            margin: 300px auto;
+            text-align: center;
+        }
+
+        .content .input-container {
+            /* 宽高自行定义即可 */
+            width: 610px;
+            height: 35px;
+            /* 由于里面的子元素，需要相对它定位。 但是自己的位置不需要动。所以设置为：relative */
+            position: relative;
+        }
+
+        /*
+         新CSS选择器：
+         input[type=text] ：代表 type=text的 input 标签。
+        */
+        .content .input-container input[type=text] {
+            width: 500px;
+            /* 因为有边框所以高度 = 35px - 2px - 2px */
+            height: 31px;
+            border: 2px solid deepskyblue;
+            /* 单独取消右边边框 */
+            border-right: none;
+            /* 取消 input 的默认边框线 */
+            outline: none;
+            /* 让光标距离左边有一定的距离。光标数据内容，所以用 padding */
+            padding-left:8px ;
+            /*
+              排成一行。
+              注意：
+              虽然，input默认是一行。但是，由于标签之间的换行或者空格会占用一点位置，宽度固定无法放到一行。
+              除非标签之间连写（写法示例见下面HTML被注释的部分），一般不建议这样写。
+            */
+            float: left;
+        }
+
+        .content .input-container input[type=button] {
+            /* 宽度 = 610px - 500px - 2px（border-left ） - 8px (padding-left)  */
+            width: 100px;
+            height: 35px;
+            background-color: deepskyblue;
+            border: none;
+            /* 排成一行 */
+            float: left;
+        }
+        /*不设置宽高，背景图不显示。但是a标签没有宽高。所以要设置成display: block;*/
+        .content .input-container a{
+            /* 宽高根据图片测量得来 */
+            width: 18px;
+            height: 17px;
+            display: block;
+            background: url("imgs/img-position/camera.png");
+
+            /* 垂直居中 */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            /*距离只要大于：button的宽度(100)即可*/
+            right: 110px;
+        }
+
+        /* 照相机的悬停变化 */
+        .content .input-container a:hover{
+            /* 如果，x轴没有移动就写0px.一定不可省略 */
+            background-position:  0px -20px ;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="content">
+    <img src="imgs/img-position/googlelogo.png" />
+    <div class="input-container">
+        <!-- <input type="text" /><a href="#"></a><input type="button" value="Google 搜索" /> -->
+
+        <!-- 下面写法，默认标签之间会有一点距离。完全按照规定的宽度，就无法放在一行（自己可以尝试一下） -->
+        <input type="text" />
+        <a href="#"></a>
+        <input type="button" value="Google 搜索" />
+
+    </div>
+</div>
+
+</body>
+</html>
