@@ -24,7 +24,7 @@
              不设置宽度，无法水平居中
              div宽度默认占满一行。
             */
-            width: 645px;
+            width: 610px;
             margin: 300px auto;
             text-align: center;
         }
@@ -32,7 +32,7 @@
         .content .input-container {
             /* 宽高自行定义即可 */
             width: 610px;
-            height: 35px;
+            height: 45px;
             /* 由于里面的子元素，需要相对它定位。 但是自己的位置不需要动。所以设置为：relative */
             position: relative;
         }
@@ -44,7 +44,7 @@
         .content .input-container input[type=text] {
             width: 500px;
             /* 因为有边框所以高度 = 35px - 2px - 2px */
-            height: 31px;
+            height: 41px;
             border: 2px solid deepskyblue;
             /* 单独取消右边边框 */
             border-right: none;
@@ -64,20 +64,23 @@
         .content .input-container input[type=button] {
             /* 宽度 = 610px - 500px - 2px（border-left ） - 8px (padding-left)  */
             width: 100px;
-            height: 35px;
+            height: 45px;
             background-color: deepskyblue;
+            color: midnightblue;
             border: none;
             /* 排成一行 */
             float: left;
+            /* 取消 input 的默认边框线 */
+            outline: none;
+
         }
         /*不设置宽高，背景图不显示。但是a标签没有宽高。所以要设置成display: block;*/
         .content .input-container a{
-            /* 宽高根据图片测量得来 */
-            width: 18px;
-            height: 17px;
+            width: 24px;
+            height: 24px;
             display: block;
-            background: url("imgs/img-position/camera.png");
-
+            background: url("imgs/img-position-google/googlemic.png");
+            background-size: 24px 24px;
             /* 垂直居中 */
             position: absolute;
             top: 50%;
@@ -87,20 +90,13 @@
             right: 110px;
         }
 
-        /* 照相机的悬停变化 */
-        .content .input-container a:hover{
-            /* 如果，x轴没有移动就写0px.一定不可省略 */
-            background-position:  0px -20px ;
-        }
-
-
     </style>
 </head>
 
 <body>
 
 <div class="content">
-    <img src="imgs/img-position/googlelogo.png" />
+    <img src="imgs/img-position-google/googlelogo.png" />
     <div class="input-container">
         <!-- <input type="text" /><a href="#"></a><input type="button" value="Google 搜索" /> -->
 
