@@ -165,7 +165,7 @@
 
      其实任意标签页可以当做img标签使用。
 
-     注意：img不设置宽高图片会显示出来。但是块级元素需要设置宽高，内联元素设置宽高也没用需要先设置为块级元素。
+     注意：img不设置宽高图片会显示出来。但是块级元素需要设置宽高，内联元素设置宽高也没用，需要先设置为块级元素。
 
      ```css
           /*图片要完整显示，宽高必须要设置和图片大小（分辨率）一致*/
@@ -354,7 +354,7 @@
    ```css
    /*
      默认值：不设置就是此种模式。
-     真实宽度(界面显示) = width+ pading-left + pading-right + boder-left + boder-right
+     真实宽度(界面显示) = width + pading-left + pading-right + boder-left + boder-right
    */
    box-sizing:content-box;
    /*

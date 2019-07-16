@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 宽高设置的值，来源于图片的分辨率 */
+        .menu {
+            width: 736px;
+            height: 78px;
+            border: 1px solid orange;
+            margin: 300px auto;
+        }
+
+        .menu li {
+            list-style: none;
+            float: left;
+            /* 高度一样，统一设置 */
+            height: 78px;
+            background: url("imgs/img-menu/nav.png");
+        }
+
+        /*
+         修改图片，这个代码必须要放在设置图片位置的前面。
+         图片位置也就是设置： background-position
+        */
+        .menu li:hover {
+            /* 鼠标悬停的时候，需要切换图片 */
+            background: url("imgs/img-menu/nav-on.png");
+        }
+
+
+        /* 选中第几个子元素同时子元素是 li (新CSS选择器) */
+        .menu li:nth-child(1) {
+            /* 宽度不一样，都单独设置 */
+            width: 100px;
+        }
+        .menu li:nth-child(2) {
+            /* 由于限制了宽度，所以只能显示图片的一部分  */
+            width: 124px;
+            /*
+               默认是以左上角排列图片。
+               background-position属性可以移动图片的位置。
+               格式：background-position: x  y ;
+                    x => x轴的偏移量 (x轴没有偏移必须要写:0px ,例如：background-position: 0px 200px )
+                    y => y轴的偏移量 (y轴没有偏移可以默认不写  ,例如：background-position: 200px )
+
+                    示例：background-position: 100px 200px ;
+                         图片水平往右偏移100px,垂直往下偏移200px;
+            */
+            background-position: -100px;
+        }
+
+        .menu li:nth-child(3) {
+            width: 146px;
+            /* 记得累加前面的宽度 */
+            background-position: -224px;
+        }
+
+        .menu li:nth-child(4) {
+            width: 120px;
+            background-position: -370px;
+        }
+
+        .menu li:nth-child(5) {
+            width: 124px;
+            background-position: -490px;
+        }
+
+        .menu li:nth-child(6) {
+            width: 122px;
+            background-position: -614px;
+        }
+    </style>
+</head>
+
+<body>
+
+<ul class="menu">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+
+</html>
