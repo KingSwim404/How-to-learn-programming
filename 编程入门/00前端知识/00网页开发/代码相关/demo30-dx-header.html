@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* ================头部 */
+        #header{
+            width: 100%;
+            height: 686px;
+            background: white;
+        }
+
+        #header #nav {
+            width: 100%;
+            height: 78px;
+            /* 阴影 : 1，水平偏移，2，垂直偏移，3，虚化度 4，颜色 */
+            box-shadow: 0px 1px 10px black;
+            position: relative;
+            /* 处于上层 */
+            z-index: 1;
+        }
+
+
+        #header #nav>div{
+            width: 1273px;
+            height: 78px;
+            margin: 0 auto;
+        }
+
+        /* 所有子元素排成一行 */
+
+        #header #nav>div>*{
+          float: left;
+        }
+
+
+        /* ================搜索相关 */
+
+        #header .search {
+            width: 30px;
+            height: 78px;
+            margin: 0 20px 0px 60px;
+            /* 图片不重复， 居中显示*/
+            background: url("imgs/img-daxue/search.png") no-repeat center;
+        }
+
+
+        /* ================登录相关 */
+
+        #header .login{
+            height: 50px;
+            text-align: center;
+            border-left: 1px solid gainsboro;
+            padding-left:20px ;
+
+            /* 垂直居中 ，在自己的原来的位置微调。*/
+            position: relative;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+
+        #header .login>img {
+            height: 30px;
+        }
+
+        #header .login>a {
+            font-size: 12px;
+            text-decoration: none;
+            color: gray;
+        }
+
+        #header .login>a:hover {
+            color: aqua;
+        }
+
+
+        /* ================菜单相关 ： 和之前的讲的练习03，CSS代码一样的。*/
+        #header .menu {
+            width: 736px;
+            height: 78px;
+            margin-left: 60px;
+        }
+
+        #header .menu li {
+            list-style: none;
+            float: left;
+            height: 78px;
+            background: url("imgs/img-daxue/nav.png");
+        }
+        #header .menu li:hover {
+            background: url("imgs/img-daxue/nav-on.png");
+        }
+
+        #header .menu li:nth-child(1) {
+            width: 100px;
+            /* 第一个默认选中 */
+            background: url("imgs/img-daxue/nav-on.png");
+        }
+        #header .menu li:nth-child(2) {
+
+            width: 124px;
+            background-position: -100px;
+        }
+
+        #header .menu li:nth-child(3) {
+            width: 146px;
+            /* 记得累加前面的宽度 */
+            background-position: -224px;
+        }
+
+        #header .menu li:nth-child(4) {
+            width: 120px;
+            background-position: -370px;
+        }
+        #header .menu li:nth-child(5) {
+            width: 124px;
+            background-position: -490px;
+        }
+        #header .menu li:nth-child(6) {
+            width: 122px;
+            background-position: -614px;
+        }
+
+
+        /* ================ 轮播图 （后续用js实现） */
+        #header #banner{
+            width: 1440px;
+            height: 360px;
+            margin: 0 auto;
+            /*一定要有，不然右下方的点定位不准*/
+            position: relative;
+        }
+
+        /*定位四个点的位置*/
+        #banner .dots {
+            right: 186px;
+            bottom: 14px;
+            position: absolute;
+        }
+
+        #banner .dots>li {
+            width: 16px;
+            height: 16px;
+            /*设置间隙*/
+            margin-right: 10px;
+            float: left;
+            background: url("imgs/img-daxue/banner-counter.png");
+
+        }
+
+        #banner .dots>li:hover {
+            background: url("imgs/img-daxue/banner-counter-on.png");
+        }
+
+        #banner .dots>li:nth-child(2) {
+            background-position: -26px;
+        }
+
+        #banner .dots>li:nth-child(3) {
+            background-position: -52px;
+        }
+
+        #banner .dots>li:nth-child(4) {
+            background-position: -78px;
+        }
+
+
+        /* ================ 直播 */
+        #header #live {
+            width: 1028px;
+            height: 250px;
+            margin: 0 auto;
+            background: url("imgs/img-daxue/live-bg.png");
+            position: relative;
+        }
+
+        #live>img {
+            padding: 12px 0px;
+        }
+
+        #live .live-pic {
+            float: left;
+            width: 225px;
+            margin-left: 50px;
+        }
+
+        #live .live-text {
+            float: right;
+            width: 520px;
+            margin-right: 200px;
+        }
+
+        #live .time-icon {
+
+            width: 12px;
+            height: 12px;
+            /*span标签没有宽高*/
+            display: inline-block;
+            background: url("imgs/img-daxue/icons.png");
+            background-position-y:-6px;
+            margin-right: 10px;
+        }
+
+        #live .time {
+            color: grey;
+            font-size: 13px;
+            display: inline-block;
+        }
+        /*当直接子元素都是同一类型标签使用nth-child*/
+        /*header .live .live_text>p:nth-child(1) {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            background-color: blue;
+        } */
+        /*当子元素里面有其他标签使用nth-of-type*/
+
+        #live .live-text>p:nth-of-type(1) {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        #live .live-left,
+        #live .live-right {
+            width: 20px;
+            height: 30px;
+            display: block;
+            background: url("imgs/img-daxue/sliders-btn.png");
+            position: absolute;
+        }
+
+        #live .live-left {
+            background-position: -5px -10px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        #live .live-right {
+            background-position: -5px -105px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        #live .live-bottom {
+            width: 40px;
+            height: 19px;
+            display: block;
+            background: url("imgs/img-daxue/slider-close.png");
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+
+        #content{
+            width: 100%;
+            height: 2060px;
+            padding-top: 20px;
+            background-color: gainsboro;
+        }
+
+
+        /* 中间区域需要水平居中 */
+        #container{
+            width: 1068px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+
+        #content-left{
+            width: 780px;
+            height: 100%;
+            float: left;
+            background: white;
+        }
+
+        /*
+          四个小分区宽度一样；都有内边距；除最后一个外，底部都有margin.
+          共有的属性，一般写在一起回好一些。方便同时修改，节省代码量。
+        */
+        #content-left>div{
+            width: 780px;
+            padding: 20px;
+            margin-bottom: 20px;
+            /*
+             防止padding把区域变大。
+             */
+            box-sizing: border-box;
+            background: olivedrab;
+        }
+
+        #hot-class{
+            height: 355px;
+        }
+
+        #good-share{
+            height: 500px;
+        }
+        #special-class{
+            height: 355px;
+        }
+        #elaborate-class{
+            height: 790px;
+            /* 最后一个底部没有距离 */
+            margin-bottom: 0;
+        }
+
+        #content-right{
+            width: 270px;
+            height: 100%;
+            padding: 22px;
+            float: right;
+            /* 防止内边距把区域变大 */
+            box-sizing: border-box;
+            background: white;
+        }
+
+        #footer{
+            width: 100%;
+            height: 350px;
+            background: aquamarine;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header id="header" >
+
+    <div id="nav">
+        <div>
+            <img src="imgs/img-daxue/logo.png" alt="logo"/>
+            <nav>
+                <ul class="menu">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+            <a class="search"  ></a>
+            <div class="login">
+                <img src="imgs/img-daxue/qq.png" alt="登录"/>
+                <br/>
+                <a href="#">登录</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="banner" >
+        <img src="imgs/img-daxue/1508920480342.jpg" />
+        <ul class="dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="live">
+        <img src="imgs/img-daxue/live-title.png" />
+        <div class="live-content">
+            <img class="live-pic" src="imgs/img-daxue/1510296158520.jpg" />
+            <div class="live-text">
+                <h3>JetBrains开发日</h3>
+                <p><span class="time-icon"></span><span class="time">20xx年xx月xx日</span> </p>
+                <p>Kotlin 编程语言的设计和创始人 Andrey Breslav 、JetBrains 开发者宣传推广副总裁 Hadi Hariri做客腾大， 与你来一场技术盛宴。
+                </p>
+            </div>
+        </div>
+        <a class="live-left" href="#"></a>
+        <a class="live-right" href="#"></a>
+        <a class="live-bottom" href="#"></a>
+    </div>
+
+</header>
+
+<article id="content">
+
+    <article id="container">
+
+        <section id="content-left">
+
+            <div id="hot-class"></div>
+
+            <div id="good-share"></div>
+
+            <div id="special-class" ></div>
+
+            <div id="elaborate-class" ></div>
+        </section>
+
+        <aside id="content-right"></aside>
+
+    </article>
+
+</article>
+
+<footer id="footer"></footer>
+
+</body>
+</html>
