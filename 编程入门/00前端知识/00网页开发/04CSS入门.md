@@ -46,7 +46,7 @@
    - 一般格式如下：
    
      ```
-     xxx0{ 
+        xxx0{ 
           yyyy0 : zzzz0;
           yyyy1 : zzzz1;
          }
@@ -54,7 +54,7 @@
      1、左边(yyyy0)代表属性名；右边(zzzz0)代表属性值。
      2、属性名不可重复：
         xxx0{ 
-        yyyy0 : zzzz0;
+          yyyy0 : zzzz0;
           yyyy0 : zzzz1;  （错误）
          }
          
