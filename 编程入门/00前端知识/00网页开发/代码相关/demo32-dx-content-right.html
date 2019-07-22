@@ -5,34 +5,26 @@
     <title></title>
     <style type="text/css">
 
-        *{
+        * {
             margin: 0;
             padding: 0;
             list-style: none;
         }
 
 
-        /* 所有的宽高都是基于设计图。当时由于我们没有设计图，只好通过谷歌浏览器的插件测量。 */
-
-        /*
-           CSS代码 和 demo28没有任何区别。只是HTML 做了改变，使用了一些更语义化的标签。
-           header、 article、section 、footer 和 div 在使用上没有差别——可以互相替代。
-           只是，这样对于浏览器和开发者来说都比较友好，还有一起他的语义化标签，可以自行搜索学习一下。
-        */
-
-        html,body{
+        html, body {
             width: 100%;
             height: 100%;
         }
 
-        #header{
+        #header {
             width: 100%;
             height: 686px;
             background: burlywood;
         }
 
 
-        #content{
+        #content {
             width: 100%;
             height: 2060px;
             padding-top: 20px;
@@ -41,14 +33,14 @@
 
 
         /* 中间区域需要水平居中 */
-        #container{
+        #container {
             width: 1068px;
             height: 100%;
             margin: 0 auto;
         }
 
 
-        #content-left{
+        #content-left {
             width: 780px;
             height: 100%;
             float: left;
@@ -59,7 +51,7 @@
           四个小分区宽度一样；都有内边距；除最后一个外，底部都有margin.
           共有的属性，一般写在一起回好一些。方便同时修改，节省代码量。
         */
-        #content-left>div{
+        #content-left > div {
             width: 780px;
             padding: 20px;
             margin-bottom: 20px;
@@ -70,23 +62,28 @@
             background: olivedrab;
         }
 
-        #hot-class{
+        #hot-class {
             height: 355px;
         }
 
-        #good-share{
+        #good-share {
             height: 500px;
         }
-        #special-class{
+
+        #special-class {
             height: 355px;
         }
-        #elaborate-class{
+
+        #elaborate-class {
             height: 790px;
             /* 最后一个底部没有距离 */
             margin-bottom: 0;
         }
 
-        #content-right{
+
+        /*========================中间右边区域*/
+
+        #content-right {
             width: 270px;
             height: 100%;
             padding: 22px;
@@ -97,20 +94,7 @@
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        #footer{
+        #footer {
             width: 100%;
             height: 350px;
             background: aquamarine;
@@ -121,7 +105,7 @@
 
 <body>
 
-<header id="header" >
+<header id="header">
 
 </header>
 
@@ -135,12 +119,77 @@
 
             <div id="good-share"></div>
 
-            <div id="special-class" ></div>
+            <div id="special-class"></div>
 
-            <div id="elaborate-class" ></div>
+            <div id="elaborate-class"></div>
         </section>
 
-        <aside id="content-right"></aside>
+        <aside id="content-right">
+            <h3><span></span>排行榜</h3>
+            <div class="hottest">
+                <div class="hottest-list">
+                    <h3>
+                        <a>最热排行</a><a>新课上线</a>
+                    </h3>
+                    <ul class="pic-text">
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">1</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1452663224623.jpg"/>
+                            <p><a href="#">2</a><a href="#">张小龙：微信四大价值观</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">3</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+                        <li>
+                            <img src="tx/1510631401811.jpg"/>
+                            <p><a href="#">4</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">5</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+
+                    </ul>
+
+                    <ul class="text">
+                        <li>
+                            <p>
+                                <span>6</span>
+                                <a href="#">马化腾：“互联网+”时代，腾讯只做连接器和内容</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>7</span>
+                                <a href="#">腾讯8分钟产品课|第一集：用户</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>8</span>
+                                <a href="#">何凌南：谣言在想什么</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>9</span>
+                                <a href="#">张小龙：4小时演讲，全面总结微信8年</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>10</span>
+                                <a href="#">腾大直播间|红海中寻生路，化被动为主动的产品思考</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
 
     </article>
 
