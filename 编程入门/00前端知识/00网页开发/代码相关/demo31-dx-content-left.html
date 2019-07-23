@@ -16,6 +16,24 @@
             height: 100%;
         }
 
+        /*  单行省略  */
+        .singleline-omit {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /*多行省略*/
+        .multiline-omit {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            /*代表多少行~~*/
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+
         #header {
             width: 100%;
             height: 686px;
@@ -120,22 +138,6 @@
             font-size: 12px;
         }
 
-        /*  单行省略  */
-        .singleline-omit {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        /*多行省略*/
-        .multiline-omit {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            /*代表多少行~~*/
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
 
         /* =================干货分享 */
 
@@ -282,12 +284,12 @@
 
         /*====================================底部颜色分割线*/
 
-        #split-line {
+        #color-split-line {
             width: 100%;
             height: 4px;
         }
 
-        #split-line>li {
+        #color-split-line>li {
             float: left;
             width: 25%;
             height: 4px;
@@ -295,15 +297,15 @@
             background-color: deepskyblue;
         }
 
-        #split-line>li:nth-child(2) {
+        #color-split-line>li:nth-child(2) {
             background-color: orange;
         }
 
-        #split-line>li:nth-child(3) {
+        #color-split-line>li:nth-child(3) {
             background-color: green;
         }
 
-        #split-line>li:last-child {
+        #color-split-line>li:last-child {
             background-color: brown;
         }
 
@@ -487,7 +489,7 @@
 
 </article>
 
-<ul id="split-line">
+<ul id="color-split-line">
     <li></li>
     <li></li>
     <li></li>
