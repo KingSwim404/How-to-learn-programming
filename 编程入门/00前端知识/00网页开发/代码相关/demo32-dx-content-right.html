@@ -55,6 +55,8 @@
             width: 1068px;
             height: 100%;
             margin: 0 auto;
+            /*方便二维码定位*/
+            position: relative;
         }
 
 
@@ -348,6 +350,21 @@
             margin: 0 auto;
         }
 
+
+        /*==========================二维码*/
+        .qr-code {
+            width: 120px;
+            height: 160px;
+            position: absolute;
+            /*宽度+pading+左边距*/
+            right: -139px;
+            top: 0;
+            background-color: white;
+            font-size: 13px;
+            text-align: center;
+            padding: 5px;
+        }
+
         #footer {
             width: 100%;
             height: 350px;
@@ -466,6 +483,12 @@
                 </div>
             </div>
         </aside>
+
+        <div class="qr-code">
+            <p>手机看直播学干货</p>
+            <img src="imgs/img-daxue/qr.jpg" />
+            <p>关注腾讯大学公号</p>
+        </div>
     </article>
 </article>
 <footer id="footer"></footer>

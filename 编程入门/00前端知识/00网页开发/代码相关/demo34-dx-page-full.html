@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        /*  单行省略  */
+        .singleline-omit {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /*多行省略*/
+        .multiline-omit {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            /*代表多少行~~*/
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+
+
+        /* ================头部 */
+        #header{
+            width: 100%;
+            height: 686px;
+            background: white;
+        }
+
+        #header #nav {
+            width: 100%;
+            height: 78px;
+            /* 阴影 : 1，水平偏移，2，垂直偏移，3，虚化度 4，颜色 */
+            box-shadow: 0px 1px 10px black;
+            position: relative;
+            /* 处于上层 */
+            z-index: 1;
+        }
+
+
+        #header #nav>div{
+            width: 1273px;
+            height: 78px;
+            margin: 0 auto;
+        }
+
+        /* 所有子元素排成一行 */
+
+        #header #nav>div>*{
+            float: left;
+        }
+
+
+        /* ================搜索相关 */
+
+        #header .search {
+            width: 30px;
+            height: 78px;
+            margin: 0 20px 0px 60px;
+            /* 图片不重复， 居中显示*/
+            background: url("imgs/img-daxue/search.png") no-repeat center;
+        }
+
+
+        /* ================登录相关 */
+
+        #header .login{
+            height: 50px;
+            text-align: center;
+            border-left: 1px solid gainsboro;
+            padding-left:20px ;
+
+            /* 垂直居中 ，在自己的原来的位置微调。*/
+            position: relative;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+
+        #header .login>img {
+            height: 30px;
+        }
+
+        #header .login>a {
+            font-size: 12px;
+            text-decoration: none;
+            color: gray;
+        }
+
+        #header .login>a:hover {
+            color: aqua;
+        }
+
+
+        /* ================菜单相关 ： 和之前的讲的练习03，CSS代码一样的。*/
+        #header .menu {
+            width: 736px;
+            height: 78px;
+            margin-left: 60px;
+        }
+
+        #header .menu li {
+            list-style: none;
+            float: left;
+            height: 78px;
+            background: url("imgs/img-daxue/nav.png");
+        }
+        #header .menu li:hover {
+            background: url("imgs/img-daxue/nav-on.png");
+        }
+
+        #header .menu li:nth-child(1) {
+            width: 100px;
+            /* 第一个默认选中 */
+            background: url("imgs/img-daxue/nav-on.png");
+        }
+        #header .menu li:nth-child(2) {
+
+            width: 124px;
+            background-position: -100px;
+        }
+
+        #header .menu li:nth-child(3) {
+            width: 146px;
+            /* 记得累加前面的宽度 */
+            background-position: -224px;
+        }
+
+        #header .menu li:nth-child(4) {
+            width: 120px;
+            background-position: -370px;
+        }
+        #header .menu li:nth-child(5) {
+            width: 124px;
+            background-position: -490px;
+        }
+        #header .menu li:nth-child(6) {
+            width: 122px;
+            background-position: -614px;
+        }
+
+
+        /* ================ 轮播图 （后续用js实现） */
+        #header #banner{
+            width: 1440px;
+            height: 360px;
+            margin: 0 auto;
+            /*一定要有，不然右下方的点定位不准*/
+            position: relative;
+        }
+
+        /*定位四个点的位置*/
+        #banner .dots {
+            right: 186px;
+            bottom: 14px;
+            position: absolute;
+        }
+
+        #banner .dots>li {
+            width: 16px;
+            height: 16px;
+            /*设置间隙*/
+            margin-right: 10px;
+            float: left;
+            background: url("imgs/img-daxue/banner-counter.png");
+
+        }
+
+        #banner .dots>li:hover {
+            background: url("imgs/img-daxue/banner-counter-on.png");
+        }
+
+        #banner .dots>li:nth-child(2) {
+            background-position: -26px;
+        }
+
+        #banner .dots>li:nth-child(3) {
+            background-position: -52px;
+        }
+
+        #banner .dots>li:nth-child(4) {
+            background-position: -78px;
+        }
+
+
+        /* ================ 直播 */
+        #header #live {
+            width: 1028px;
+            height: 250px;
+            margin: 0 auto;
+            background: url("imgs/img-daxue/live-bg.png");
+            position: relative;
+        }
+
+        #live>img {
+            padding: 12px 0px;
+        }
+
+        #live .live-pic {
+            float: left;
+            width: 225px;
+            margin-left: 50px;
+        }
+
+        #live .live-text {
+            float: right;
+            width: 520px;
+            margin-right: 200px;
+        }
+
+        #live .time-icon {
+
+            width: 12px;
+            height: 12px;
+            /*span标签没有宽高*/
+            display: inline-block;
+            background: url("imgs/img-daxue/icons.png");
+            background-position-y:-6px;
+            margin-right: 10px;
+        }
+
+        #live .time {
+            color: grey;
+            font-size: 13px;
+            display: inline-block;
+        }
+        /*当直接子元素都是同一类型标签使用nth-child*/
+        /*header .live .live_text>p:nth-child(1) {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            background-color: blue;
+        } */
+        /*当子元素里面有其他标签使用nth-of-type*/
+
+        #live .live-text>p:nth-of-type(1) {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        #live .live-left,
+        #live .live-right {
+            width: 20px;
+            height: 30px;
+            display: block;
+            background: url("imgs/img-daxue/sliders-btn.png");
+            position: absolute;
+        }
+
+        #live .live-left {
+            background-position: -5px -10px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        #live .live-right {
+            background-position: -5px -105px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        #live .live-bottom {
+            width: 40px;
+            height: 19px;
+            display: block;
+            background: url("imgs/img-daxue/slider-close.png");
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+
+        #content{
+            width: 100%;
+            height: 2060px;
+            padding-top: 20px;
+            background-color: gainsboro;
+        }
+
+
+        /* 中间区域需要水平居中 */
+        #container{
+            width: 1068px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+
+        #content-left{
+            width: 780px;
+            height: 100%;
+            float: left;
+            background: gainsboro;
+        }
+
+        /*
+          四个小分区宽度一样；都有内边距；除最后一个外，底部都有margin.
+          共有的属性，一般写在一起回好一些。方便同时修改，节省代码量。
+        */
+        #content-left>div{
+            width: 780px;
+            padding: 20px;
+            margin-bottom: 20px;
+            /*
+             防止padding把区域变大。
+             */
+            box-sizing: border-box;
+            background: white;
+        }
+
+        /*==================热门课程*/
+        #hot-class {
+            height: 355px;
+        }
+
+
+        .title {
+            height: 24px;
+            line-height: 24px;
+            /* 文本的胖瘦  */
+            font-weight: 100;
+            margin-bottom: 20px;
+        }
+
+        .title > img {
+            margin-right: 13px;
+        }
+
+        .title > a {
+            float: right;
+            text-decoration: none;
+            color: gray;
+        }
+
+        .text-content > li {
+            float: left;
+            width: 230px;
+            height: 275px;
+            margin-right: 25px;
+        }
+
+        /*最后一个li没有外边距*/
+        .text-content > li:last-child {
+            margin-right: 0px;
+        }
+
+        .text-content > li > img {
+            width: 230px;
+            height: 160px;
+            border-bottom: 3px solid cyan;
+        }
+
+
+        .text-content > li > a {
+            text-decoration: none;
+            color: black;
+            margin: 10px 0;
+            display: block;
+        }
+
+
+        .text-content > li > p {
+            color: gray;
+            height: 50px;
+            width: 190px;
+            font-size: 12px;
+        }
+
+
+        /* =================干货分享 */
+
+        #good-share {
+            height: 500px;
+        }
+
+
+        .share-content > li {
+            width: 740px;
+            height: 130px;
+            background: gainsboro url("imgs/img-daxue/icon-at.png") no-repeat 650px -20px;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .share-content > li:nth-child(2) {
+            background-image: url("imgs/img-daxue/icon-video.png");
+        }
+
+        .share-content > li:last-child {
+            background-image: url("imgs/img-daxue/icon-laptop.png");
+        }
+
+
+        .share-content .share-pic {
+            float: left;
+            width: 124px;
+            margin-right: 20px;
+        }
+
+        .share-content .share-text {
+            float: left;
+            width: 480px;
+            height: 85px;
+            font-size: 15px;
+        }
+
+
+        .share-text > h3, .share-text > p {
+            font-size: 15px;
+            font-weight: 200;
+        }
+
+
+        .share-text .time-icon {
+            width: 12px;
+            height: 12px;
+            /*span标签没有宽高*/
+            display: inline-block;
+            margin-right: 10px;
+            background: url("imgs/img-daxue/icons.png") no-repeat 0px -6px;
+        }
+
+        .share-text .time {
+            color: grey;
+            font-size: 13px;
+            display: inline-block;
+        }
+
+
+        /*=================专题课程*/
+        #special-class {
+            height: 355px;
+        }
+
+        /*由于和热门课程的CSS一样，所以就使用了同样的CSS了*/
+
+
+        /*=================精品课程*/
+        #elaborate-class {
+            height: 790px;
+            /* 最后一个底部没有距离 */
+            margin-bottom: 0;
+        }
+
+        .elaborate-content {
+            width: 735px;
+            height: 735px;
+        }
+
+
+        .elaborate-content>li {
+            float: left;
+            width: 350px;
+            height: 350px;
+            margin-bottom: 16px;
+        }
+
+        .elaborate-content>li>img {
+            width: 350px;
+        }
+
+        .elaborate-content>li:nth-child(2n+1) {
+            margin-right: 32px;
+        }
+
+        .elaborate-content>li>h3 {
+            margin-bottom: 20px;
+        }
+
+        .elaborate-content>li>h3>a {
+            width: 34px;
+            height: 7px;
+            font-size: 6px;
+            display: inline-block;
+            text-decoration: none;
+            color: gainsboro;
+        }
+
+        .elaborate-content .title-icon {
+            width: 300px;
+            height: 24px;
+            display: inline-block;
+            background: url("imgs/img-daxue/bout-title-bg.png");
+            padding-left: 30px;
+            padding-bottom: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .elaborate-content li:nth-of-type(2) .title-icon {
+            background-position: 0px -24px;
+        }
+
+        .elaborate-content li:nth-of-type(3) .title-icon{
+            background-position: 0px -48px;
+        }
+
+        .elaborate-content li:last-of-type .title-icon{
+            background-position: 0px -72px;
+        }
+
+        .elaborate-content>li>p {
+            font-size: 13px;
+            margin: 8px 0;
+        }
+
+        .elaborate-content>li>p:nth-of-type(2) {
+            color: gray;
+        }
+
+
+        /*====================================底部颜色分割线*/
+
+        #color-split-line {
+            width: 100%;
+            height: 4px;
+        }
+
+        #color-split-line>li {
+            float: left;
+            width: 25%;
+            height: 4px;
+            list-style: none;
+            background-color: deepskyblue;
+        }
+
+        #color-split-line>li:nth-child(2) {
+            background-color: orange;
+        }
+
+        #color-split-line>li:nth-child(3) {
+            background-color: green;
+        }
+
+        #color-split-line>li:last-child {
+            background-color: brown;
+        }
+
+
+        /*========================中间右边区域*/
+
+        #content-right {
+            width: 270px;
+            height: 100%;
+            padding: 22px;
+            float: right;
+            /* 防止内边距把区域变大 */
+            box-sizing: border-box;
+            background: white;
+        }
+
+
+        /*=================排行榜*/
+        #content-right .hottest {
+            width: 228px;
+            height: 1120px;
+            /*border: 1px solid blue;*/
+            position: relative;
+        }
+
+        #content-right>h3>span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("imgs/img-daxue/icon-rank.png");
+            margin-right: 13px;
+        }
+
+        #content-right>h3 {
+            font-weight: 100;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .hottest .hottest-list{
+            width: 228px;
+            height: 1105px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .hottest .hottest-list>h3 {
+            width: 226px;
+            height: 34px;
+            background: url("imgs/img-daxue/rank-tab-gray-bg.png") no-repeat center;
+            padding-left: 2px;
+            /*如果pading没有效果。
+             * 一般是因为设置了怪异的盒模型的同时，子元素又比较大，所以移不动。*/
+            padding-bottom: 2px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .hottest .hottest-list>h3>a {
+            text-decoration: none;
+            display: inline-block;
+            color: black;
+            font-size: 13px;
+            width: 110px;
+            height: 32px;
+            text-align: center;
+            line-height: 34px;
+            box-sizing: border-box;
+            border-left: 1px solid gainsboro;
+        }
+
+        .hottest .hottest-list>h3>a:nth-child(1) {
+            border-top: 1px solid gainsboro;
+        }
+
+        .hottest .hottest-list>h3>a:nth-child(2) {
+            border-bottom: 1px solid gainsboro;
+        }
+
+
+        /*==============图文混排列表*/
+        .hottest .pic-text>li {
+            width: 228px;
+            height: 162px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hottest .pic-text>li>img {
+            width: 228px;
+            height: 162px;
+        }
+
+        .hottest .pic-text>li>p {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 13px;
+            width: 228px;
+            height: 27px;
+        }
+
+        .hottest .pic-text>li>p>a {
+            display: inline-block;
+            width: 20px;
+            height: 27px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 27px;
+            color: white;
+        }
+
+        .hottest .pic-text>li>p>a:nth-child(1) {
+            background-color: blueviolet;
+        }
+
+        .hottest .pic-text>li>p>a:nth-child(2) {
+            width: 208px;
+        }
+
+        .hottest .pic-text>li:nth-child(2)>p>a:nth-child(1) {
+            background-color: sandybrown;
+        }
+
+        .hottest .pic-text>li:nth-child(3)>p>a:nth-child(1) {
+            background-color: cadetblue;
+        }
+
+        .hottest .pic-text>li:nth-child(4)>p>a:nth-child(1) {
+            background-color: brown;
+        }
+
+        .hottest .pic-text>li:nth-child(5)>p>a:nth-child(1) {
+            background-color: lightgreen;
+        }
+        /*==============纯文本列表*/
+
+        .hottest .index-text>li{
+            width: 228px;
+            height: 22px;
+            margin-bottom: 12px;
+        }
+
+        .hottest .index-text>li:last-child {
+            margin-bottom: 0px;
+        }
+
+        .hottest .index-text>li>p>span {
+            width: 22px;
+            height: 22px;
+            background: url("imgs/img-daxue/icon-rank-item.png") no-repeat center;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            float: left;
+            margin-right: 6px;
+        }
+
+        .hottest .index-text>li>p>a {
+            width: 200px;
+            height: 22px;
+            float: left;
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+        }
+
+
+        /*==================排行榜列表底部区域*/
+
+        .gray-split-line {
+            background-color: gainsboro;
+            width: 228px;
+            height: 1px;
+            margin: 20px 0px;
+        }
+
+        /*==================交流*/
+        .communication {
+            margin-top: 28px;
+        }
+
+        .pic-mark{
+            position: relative;
+        }
+
+        .pic-mark .mark{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            /* 自己要移出自身的一半 */
+            transform: translate(-50%,-50%);
+        }
+
+        .communication>p {
+            margin: 10px 0px;
+            font-size: 20px;
+        }
+
+        .communication>p:nth-of-type(2) {
+            font-size: 15px;
+        }
+        /*==================考试联系*/
+
+        .contact>h3>span:nth-child(1) {
+            background: url("imgs/img-daxue/icon-phone.png");
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .contact>h3>span:nth-child(2) {
+            font-weight: 200;
+            font-size: 20px;
+        }
+
+        .contact>p {
+            font-size: 15px;
+            margin: 3px 0px;
+        }
+
+        .contact .exam {
+            width: 200px;
+            height: 120px;
+            background-color: gainsboro;
+            margin: 26px 12px;
+        }
+
+        .contact .exam>span {
+            width: 160px;
+            height: 50px;
+            display: block;
+            font-size: 40px;
+            margin: 0px  auto 5px auto;
+
+        }
+
+        .contact .exam>a {
+            width: 160px;
+            height: 40px;
+            display: block;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+            margin: 0 auto;
+        }
+
+
+        /*==========================二维码*/
+        .qr-code {
+            width: 120px;
+            height: 160px;
+            position: absolute;
+            /*宽度+pading+左边距*/
+            right: -139px;
+            top: 0;
+            background-color: white;
+            font-size: 13px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        /*===========================底部*/
+
+        #footer{
+            width: 100%;
+            height: 350px;
+            background: white;
+        }
+
+        .footer-partner {
+            height: 350px;
+            width: 1070px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .footer-left {
+            width: 740px;
+            float: left;
+            padding: 20px;
+        }
+
+        .footer-left .up>img {
+            margin: 15px 30px 0 10px;
+            width: 80px;
+        }
+
+        .footer-left .up>img:nth-of-type(6),
+        .footer-left .up>img:nth-of-type(12) {
+            margin-right: 0;
+        }
+
+        .footer-left .up>a {
+            display: inline-block;
+            text-decoration: none;
+            margin: 15px 30px 0px 10px;
+            color: black;
+            position: relative;
+            top: -10px;
+        }
+
+        .footer-left .down {
+            margin-top: 10px;
+        }
+
+        .footer-left .down>a {
+            float: left;
+            text-decoration: none;
+            margin: 10px 20px 0 10px;
+            color: black;
+            font-size: 13px;
+        }
+
+        .footer-right {
+            width: 227px;
+            float: right;
+            padding: 20px;
+        }
+
+        .footer-right>img {
+            margin: 10px 0px;
+            background-color: white;
+        }
+        /*版权*/
+
+        #footer .copyright {
+            width: 100%;
+            background-color: #A9A9A9;
+            text-align: center;
+            padding: 30px 0px;
+            font-size: 11px;
+        }
+
+        #footer .copyright>p {
+            margin-bottom: 5px;
+        }
+
+        #footer .copyright>p:nth-child(1)>a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+            border-right: 1px solid black;
+            padding-right: 20px;
+            font-size: 12px;
+        }
+
+        #footer .copyright>p:nth-child(1)>a:nth-child(3) {
+            margin-right: 0px;
+            border-right: 0px solid black;
+            padding-right: 0px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<header id="header" >
+
+    <div id="nav">
+        <div>
+            <img src="imgs/img-daxue/logo.png" alt="logo"/>
+            <nav>
+                <ul class="menu">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+            <a class="search"  ></a>
+            <div class="login">
+                <img src="imgs/img-daxue/qq.png" alt="登录"/>
+                <br/>
+                <a href="#">登录</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="banner" >
+        <img src="imgs/img-daxue/1508920480342.jpg" />
+        <ul class="dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="live">
+        <img src="imgs/img-daxue/live-title.png" />
+        <div class="live-content">
+            <img class="live-pic" src="imgs/img-daxue/1510296158520.jpg" />
+            <div class="live-text">
+                <h3>JetBrains开发日</h3>
+                <p><span class="time-icon"></span><span class="time">20xx年xx月xx日</span> </p>
+                <p>Kotlin 编程语言的设计和创始人 Andrey Breslav 、JetBrains 开发者宣传推广副总裁 Hadi Hariri做客腾大， 与你来一场技术盛宴。
+                </p>
+            </div>
+        </div>
+        <a class="live-left" href="#"></a>
+        <a class="live-right" href="#"></a>
+        <a class="live-bottom" href="#"></a>
+    </div>
+
+</header>
+
+<article id="content">
+
+    <article id="container">
+
+        <section id="content-left">
+
+            <div id="hot-class">
+                <h3 class="title">
+                    <img src="imgs/img-daxue/icon-lesson.png"/>
+                    热门课程
+                    <a href="#">more</a>
+                </h3>
+                <ul class="text-content">
+                    <li>
+                        <img src="imgs/img-daxue/1510243888411.png"/>
+                        <a href="#">纪念碑谷2背后的灵感</a>
+                        <p class="multiline-omit">本期大师班推出特别版，专程邀请了《纪念碑谷2》游戏主美、艺术总监David</p>
+                    </li>
+                    <li>
+                        <img src="imgs/img-daxue/1509872683613.jpg"/>
+                        <a href="#">霍金：突破摄星的目标在于实...</a>
+                        <p class="multiline-omit">11月5日，在腾讯we大会上，著名物理学家霍金以视频演讲的方式向人们阐释了</p>
+                    </li>
+                    <li>
+                        <img src="imgs/img-daxue/1509450636364.png"/>
+                        <a href="#">青山周平-我的设计理想国</a>
+                        <p class="multiline-omit">B.L.U.E.建筑事务所创始人。通过巧妙的空间设计完美解决了普通家庭的居.通过巧妙的空间设计完美解决了普通家庭的居</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="good-share">
+                <h3 class="title">
+                    <img src="imgs/img-daxue/icon-share.png"/>
+                    干货分享
+                    <a href="#">more</a>
+                </h3>
+                <ul class="share-content">
+                    <li>
+                        <img class="share-pic" src="imgs/img-daxue/1509095853300.png"/>
+                        <div class="share-text">
+                            <h3>JetBrains开发日</h3>
+                            <p>
+                                <span class="time-icon"></span>
+                                <span class="time">20XX年XX月XX日</span>
+                            </p>
+                            <p>Kotlin 编程语言的设计和创始人 Andrey Breslav 、JetBrains 开发者宣传推广副总裁 Hadi Hariri做客腾大， 与你来一场技术盛宴。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="share-pic" src="imgs/img-daxue/1509098009686.png"/>
+                        <div class="share-text">
+                            <h3>JetBrains开发日</h3>
+                            <p>
+                                <span class="time-icon"></span>
+                                <span class="time">20XX年XX月XX日</span>
+                            </p>
+                            <p>Kotlin 编程语言的设计和创始人 Andrey Breslav 、JetBrains 开发者宣传推广副总裁 Hadi Hariri做客腾大， 与你来一场技术盛宴。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="share-pic" src="imgs/img-daxue/1509509065544.png"/>
+                        <div class="share-text">
+                            <h3>JetBrains开发日</h3>
+                            <p>
+                                <span class="time-icon"></span>
+                                <span class="time">20XX年XX月XX日</span>
+                            </p>
+                            <p>Kotlin 编程语言的设计和创始人 Andrey Breslav 、JetBrains 开发者宣传推广副总裁 Hadi Hariri做客腾大， 与你来一场技术盛宴。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="special-class">
+                <h3 class="title">
+                    <img src="imgs/img-daxue/icon-lesson.png"/>
+                    专题课程
+                    <a href="#">more</a>
+                </h3>
+                <ul class="text-content">
+                    <li>
+                        <img src="imgs/img-daxue/1509854541448.jpg"/>
+                        <a href="#">纪念碑谷2背后的灵感</a>
+                        <p class="multiline-omit">本期大师班推出特别版，专程邀请了《纪念碑谷2》游戏主美、艺术总监David</p>
+                    </li>
+                    <li>
+                        <img src="imgs/img-daxue/1510548125915.jpg"/>
+                        <a href="#">霍金：突破摄星的目标在于实...</a>
+                        <p class="multiline-omit">11月5日，在腾讯we大会上，著名物理学家霍金以视频演讲的方式向人们阐释了</p>
+                    </li>
+                    <li>
+                        <img src="imgs/img-daxue/1509854541448.jpg"/>
+                        <a href="#">青山周平-我的设计理想国</a>
+                        <p class="multiline-omit">B.L.U.E.建筑事务所创始人。通过巧妙的空间设计完美解决了普通家庭的居.通过巧妙的空间设计完美解决了普通家庭的居</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="elaborate-class">
+                <h3 class="title">
+                    <img src="imgs/img-daxue/icon-lesson.png"/>
+                    精品课程
+                    <a href="#">more</a>
+                </h3>
+
+                <ul class="elaborate-content">
+                    <li>
+                        <h3>
+                            <span class="title-icon">产品-营销</span>
+                            <a href="#">more</a>
+                        </h3>
+                        <img src="imgs/img-daxue/1509509065544.png"/>
+                        <p>腾讯王莹：视频内容消费下的营销升级</p>
+                        <p>腾讯视频通过以视频内容生态为基础，实现营销价值的升级是腾讯视频连接内容，引爆营销的方法。</p>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="title-icon">设计-用研</span>
+                            <a href="#">more</a>
+                        </h3>
+                        <img src="imgs/img-daxue/1505999675421.png"/>
+                        <p>腾讯王莹：视频内容消费下的营销升级</p>
+                        <p>腾讯视频通过以视频内容生态为基础，实现营销价值的升级是腾讯视频连接内容，引爆营销的方法。</p>
+                    </li>
+                    <li>
+                        <h3>
+                            <span class="title-icon">技术-运维</span>
+                            <a href="#">more</a>
+                        </h3>
+                        <img src="imgs/img-daxue/1509095853300.png"/>
+                        <p>腾讯王莹：视频内容消费下的营销升级</p>
+                        <p>腾讯视频通过以视频内容生态为基础，实现营销价值的升级是腾讯视频连接内容，引爆营销的方法。</p>
+                    </li>
+
+                    <li>
+                        <h3>
+                            <span class="title-icon">行业-创业</span>
+                            <a href="#">more</a>
+                        </h3>
+                        <img src="imgs/img-daxue/1510650852264.jpg"/>
+                        <p>腾讯王莹：视频内容消费下的营销升级</p>
+                        <p>腾讯视频通过以视频内容生态为基础，实现营销价值的升级是腾讯视频连接内容，引爆营销的方法。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <aside id="content-right">
+            <h3><span></span>排行榜</h3>
+            <div class="hottest">
+                <div class="hottest-list">
+                    <h3>
+                        <a>最热排行</a><a>新课上线</a>
+                    </h3>
+                    <ul class="pic-text">
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">1</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1452663224623.jpg"/>
+                            <p><a href="#">2</a><a href="#">张小龙：微信四大价值观</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">3</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">4</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+                        <li>
+                            <img src="imgs/img-daxue/1510631401811.jpg"/>
+                            <p><a href="#">5</a><a href="#">腾讯8分钟产品课|第二集：定位</a></p>
+                        </li>
+
+                    </ul>
+
+                    <ul class="index-text">
+                        <li>
+                            <p>
+                                <span>6</span>
+                                <a class="singleline-omit" href="#">马化腾：“互联网+”时代，腾讯只做连接器和内容</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>7</span>
+                                <a class="singleline-omit" href="#">腾讯8分钟产品课|第一集：用户</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>8</span>
+                                <a class="singleline-omit" href="#">何凌南：谣言在想什么</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>9</span>
+                                <a class="singleline-omit" href="#">张小龙：4小时演讲，全面总结微信8年</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>10</span>
+                                <a class="singleline-omit" href="#">腾大直播间|红海中寻生路，化被动为主动的产品思考</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gray-split-line">
+            </div>
+
+            <div class="communication">
+                <div class="pic-mark">
+                    <img src="imgs/img-daxue/1437012075279.png" />
+                    <img class="mark" src="imgs/img-daxue/icon-mark.png" alt="mark"/>
+                </div>
+                <p>腾讯大学</p>
+                <p>腾讯大学作为腾讯特色的学习交流平台，服务于腾讯合作伙伴及用户，面向互联网产业链，传播腾讯经验，分享行业知识及优秀实践，助力合作伙伴成长，推动开放共赢的互联网生态圈的建立。</p>
+            </div>
+
+            <div class="gray-split-line">
+            </div>
+            <div class="contact">
+                <h3><span></span><span>联系我们</span></h3>
+                <p>合作：university@tencent.com <br/> QQ&nbsp;：2813343187</p>
+                <div class="exam">
+                    <span>在线考试</span>
+                    <a href="#">ENTER入口</a>
+                </div>
+            </div>
+        </aside>
+
+        <div class="qr-code">
+            <p>手机看直播学干货</p>
+            <img src="imgs/img-daxue/qr.jpg" />
+            <p>关注腾讯大学公号</p>
+        </div>
+
+    </article>
+
+</article>
+
+<ul id="color-split-line">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<footer id="footer">
+
+    <div class="footer-partner">
+        <div class="footer-left">
+            <div class="up">
+                <p>开放平台</p>
+                <img src="imgs/img-daxue/ke.png" />
+                <img src="imgs/img-daxue/bugly_logo.jpg" />
+                <img src="imgs/img-daxue/cloud.png" />
+                <img src="imgs/img-daxue/ieg.png" />
+                <img src="imgs/img-daxue/hitem1.jpg" />
+                <img src="imgs/img-daxue/hitem3.jpg" />
+                <img src="imgs/img-daxue/hitem6.jpg" />
+                <img src="imgs/img-daxue/hitem8.jpg" />
+                <img src="imgs/img-daxue/hitem9.jpg" />
+                <img src="imgs/img-daxue/logo_bigdata.png" />
+                <img src="imgs/img-daxue/logo_guangdiantong.png" />
+                <img src="imgs/img-daxue/link_open.png" />
+                <img src="imgs/img-daxue/wetest_logo.png" />
+                <img src="imgs/img-daxue/meia.png" />
+                <a href="#">更多</a>
+            </div>
+            <div class="down">
+                <p>合作伙伴</p>
+                <a href="#">腾讯云论坛</a>
+                <a href="#">TechWeb</a>
+                <a href="#">腾讯Alloyteam</a>
+                <a href="#">CSDN</a>
+                <a href="#">36Kr</a>
+                <a href="#">DoNews</a>
+                <a href="#">APP游戏部落</a>
+                <a href="#">天极网</a>
+                <a href="#">凤凰网科技频道</a>
+                <a href="#">易观网</a>
+                <a href="#">馒头商学院</a>
+                <a href="#">雷锋网</a>
+                <a href="#">飞象网</a>
+                <a href="#">数码港</a>
+                <a href="#">艾瑞网</a>
+                <a href="#">落伍者</a>
+                <a href="#">LAMP人</a>
+                <a href="#">QQ浏览器</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>收听微博</p>
+            <img src="imgs/img-daxue/opentweibo.png" />
+            <p>关注空间</p>
+            <img src="imgs/img-daxue/openzone.png" />
+        </div>
+    </div>
+    <div class="copyright">
+        <p><a href="#">服务协议</a><a href="#">隐私政策</a><a href="#">版权保护投诉指引</a></p>
+        <p>Copyright&copy;1998 - 2017 Tencent. All Rights Reserved.</p>
+        <p>腾讯公司 版权所有</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
