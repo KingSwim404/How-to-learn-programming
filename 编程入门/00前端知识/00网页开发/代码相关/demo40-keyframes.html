@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*
+          之前学的动画属于线性动画;只可以控制起点和终点，中间的过程无法控制。
+          keyframes动画可以控制到动画的每一个时刻——包括中间时刻——可以完成更复杂的动画。
+       */
+
+
+        .div00{
+            width: 100px;
+            height: 100px;
+            background-color: #0000FF;
+            position: absolute;
+            /*
+            move: 下面定义的动画名字
+             3s : 动画执行 3 秒
+              3 : 动画执行 3 次 (设置为：infinite 无限次)
+              */
+            animation: move 3s  3 ;
+        }
+
+
+        /*
+          定义动画
+          路径：正方形
+        */
+        @keyframes move {
+            /*
+              最少要有 0% 和 100%；
+              每一个百分比，代表一个关键帧；分多少个帧，可以根据需求设置。
+              百分比之间的状态由，代码自动补齐。
+              百分比后面{}内的CSS代表这一刻的CSS状态。
+            */
+            0%{top: 0px; left: 0px; }
+            25%{top: 0px; left: 400px; }
+            50%{top:400px; left: 400px; }
+            75%{top: 400px;left: 0px; }
+            100%{top: 0px; left: 0px; }
+        }
+        
+
+    </style>
+</head>
+<body>
+
+
+<div class="div00">
+
+
+</div>
+
+
+
+</body>
+</html>

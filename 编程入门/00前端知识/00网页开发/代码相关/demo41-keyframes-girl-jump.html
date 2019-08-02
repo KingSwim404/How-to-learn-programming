@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .girl {
+            width: 180px;
+            height: 300px;
+            margin: 100px auto;
+            background: url("imgs/girl-jump.png");
+            /* step-start：去掉过渡效果 */
+            animation: jump 1s infinite step-start;
+        }
+
+        @keyframes jump {
+            0% {
+                background-position: 180px;
+            }
+            15% {
+                background-position: 360px;
+            }
+            30% {
+                background-position: 540px;
+            }
+            45% {
+                background-position: 720px;
+            }
+            60% {
+                background-position: 900px;
+            }
+            75% {
+                background-position: 1080px;
+            }
+            100% {
+                background-position: 1260px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="girl">
+</div>
+
+</body>
+</html>

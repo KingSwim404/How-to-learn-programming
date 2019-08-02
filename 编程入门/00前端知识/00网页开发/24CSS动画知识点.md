@@ -102,6 +102,7 @@
              .div06{
                  /* 默认是中心点即：50% 50% 或者 center*/
                  /* 值可以是：具体数值，百分比，方位（center\top\left等） */
+                 /* 此点为左上角 */     
                  transform-origin: 0% 0%;
              }
              .div06:hover{

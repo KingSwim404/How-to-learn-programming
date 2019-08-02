@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        /*
+
+          根据不同的屏幕显示不同的排版。
+          手机和电脑屏幕大小不一样，展示的界面也会不一样。
+          （自己手动调整浏览器窗口大小，模拟屏幕变小）
+
+        */
+        .div00{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /* 范围 ：600-900  变成红色*/
+        @media only screen and (min-width: 600px) and (max-width: 900px) {
+            .div00{
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="div00">
+
+</div>
+
+</body>
+</html>

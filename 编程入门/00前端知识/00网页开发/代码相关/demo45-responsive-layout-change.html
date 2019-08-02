@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        /*
+
+        根据屏幕尺寸改变界面显示内容。
+
+        */
+
+        .boxes {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+        .boxes > div {
+            float: left;
+            width: 400px;
+            height: 800px;
+        }
+
+        .boxes .left {
+            background-color: red;
+        }
+
+        .boxes .right {
+            background-color: blue;
+        }
+
+        .boxes .left .up-l {
+            display: none;
+        }
+
+        .boxes .left .down-l {
+            width: 400px;
+            height: 800px;
+            background-color: rosybrown;
+        }
+
+        .boxes .right .up {
+            width: 400px;
+            height: 400px;
+            background-color: gold;
+        }
+
+        .boxes .right .down {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+
+        /*
+
+        800 以下
+
+        切换另一种 UI
+
+        */
+
+        @media only screen and  (max-width: 800px) {
+
+            .boxes {
+                width: 600px;
+            }
+
+            .boxes .right {
+                display: none;
+            }
+
+            .boxes .left {
+                width: 600px;
+            }
+
+            .boxes .left .up-l {
+                display: block;
+                width: 600px;
+                height: 200px;
+                background-color: black;
+            }
+
+            .boxes .left .down-l {
+                width: 600px;
+            }
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="boxes">
+    <div class="left">
+        <div class="up-l">
+        </div>
+        <div class="down-l">
+        </div>
+    </div>
+    <div class="right">
+        <div class="up">
+        </div>
+        <div class="down">
+        </div>
+    </div>
+</div>
+
+<div class="div01">
+
+</div>
+
+<div class="div02">
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+            background-color: grey;
+        }
+
+
+        #wall{
+            width: 880px;
+            margin: 100px auto;
+        }
+
+
+        #wall>img{
+            /*边框*/
+            border: 10px solid white;
+            /*阴影*/
+            box-shadow: 10px 10px 10px black;
+            transition: all 0.3s;
+            /* 方便后续使用 z-index */
+            /* 想一想为什么不用：absolute*/
+            position: relative;
+        }
+
+        /* 基数子元素 */
+        #wall>img:nth-child(2n+1){
+            transform: rotate(-20deg);
+        }
+
+        /* 偶数子元素 */
+        #wall>img:nth-child(2n){
+            transform: rotate(20deg);
+        }
+        #wall>img:hover{
+            /* 摆正以及放大1.5倍 */
+            transform: rotate(0deg) scale(1.5);
+            /* 在最上层 */
+            z-index: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+
+  <div id="wall">
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+      <img src="imgs/img-photo-wall/1.jpg" />
+  </div>
+
+</body>
+</html>

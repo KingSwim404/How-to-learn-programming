@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /*
+
+         根据屏幕尺寸改变界面内容的排列。
+
+       */
+
+
+
+        /*
+
+          默认：横排 （大于 900）
+
+          AAA
+
+          */
+
+        .boxes {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+        .boxes > div {
+            float: left;
+        }
+
+        .boxes .box01 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .boxes .box02 {
+            width: 400px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .boxes .box03 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /*
+
+          范围：600-900
+          AA
+          A
+
+          */
+        @media only screen and (min-width: 600px) and (max-width: 900px) {
+            .boxes {
+                width: 600px;
+            }
+
+            .boxes .box03 {
+                width: 600px;
+            }
+        }
+
+        /*
+
+         小于 600 竖排
+
+         A
+         A
+         A
+
+         */
+        @media only screen and  (max-width: 600px) {
+
+            .boxes {
+                width: 300px;
+            }
+
+            .boxes .box01 {
+                width: 300px;
+            }
+
+            .boxes .box02 {
+                width: 300px;
+            }
+
+            .boxes .box03 {
+                width: 300px;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="boxes">
+
+    <div class="box01">
+    </div>
+
+    <div class="box02">
+    </div>
+
+    <div class="box03">
+    </div>
+
+</div>
+
+</body>
+
+</html>
