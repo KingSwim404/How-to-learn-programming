@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*
+
+         以下三个元素背景颜色都是一样。
+         抽离一个公共的 class : bg-color.
+         这样要是背景颜色修改成其他颜色，只要修改一处地方即可。
+
+         当然，还有更好的方式；这个后续看情况再教。
+         想要提前自学可以搜索关键字：CSS预处理器；不过建议学完 JavaScript 再学最好。
+         */
+
+        .bg-color{
+
+            background-color: blue;
+        }
+
+
+       .div00{
+           width: 200px;
+           height: 200px;
+           margin-bottom: 100px;
+       }
+
+        .div01{
+            width: 400px;
+            height: 400px;
+            margin-bottom: 100px;
+        }
+
+
+        .p0{
+            width: 100px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- 多个class 之间使用空格分割，这样可以提取公共的样式 -->
+<div class="div00 bg-color">
+</div>
+
+<div class="div01 bg-color">
+</div>
+
+<p class="p0 bg-color">KingSwim</p>
+
+</body>
+</html>
