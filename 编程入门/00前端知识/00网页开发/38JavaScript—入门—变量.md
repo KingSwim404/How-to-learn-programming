@@ -86,6 +86,8 @@
      
   3. 变量运算：
   
+     [示例详细代码48](代码相关/demo48-JavaScript-compute.html)
+  
      - 数值运算
   
        ```javascript
@@ -103,20 +105,43 @@
        
      - 布尔运算
   
+       ```javascript
+           /*
+            布尔运算：与（&&）、或（||）、非（!）
+            与：所有的都为真，才是真。
+            或：有一个为真，即为真。
+            非：取反。
+            */
+           console.log(true && false); //结果是：false
+           console.log(true || false); //结果是：true
+           console.log(!true ); //结果是：false
+       ```
+  
+       
+  
      - 字符串运算
   
-  4. 1
+       ```javascript
+           /*
+            字符串运算：拼接。
+           */
+       
+           let name01 = "King";
+           let name02 = "Swim";
+       
+           console.log(name01 + name02); //结果：KingSwim;
+       ```
   
-  5. 
+       
+  
+  4. 修改变量：
+  
+     ```javascript
+     let x = 10;
+         x = 20;
+     console.log(x); // 20 
+         
+     ```
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
