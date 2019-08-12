@@ -1,4 +1,4 @@
-# 38JavaScript—程序语言入门
+# JavaScript—入门—变量
 
 - ### JavaScript在HTML的位置
 

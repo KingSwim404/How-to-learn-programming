@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    // 方法：可以理解为数学里面的函数表达式。
+    // 1、无返回值的方法：
+    //定义一个叫：say 方法
+    function say(text) {
+        alert(text);
+    }
+
+    //调用say方法。
+    say("Hello");
+
+    //2、有返回值的方法
+
+    function getJoinText(text) {
+        let result = "前缀——" + text;
+        // 将结果返回
+        return result;
+    }
+
+    let text = getJoinText("Hello");
+    //显示获得的结果。
+    alert(text);
+
+
+    /*
+      方法最大的作用：复用逻辑
+     */
+
+    //定义一个可以计算 ：0-n之间和的方法。
+
+    function getSum(n) {
+
+        let sum = 0;
+
+        for (let i = 0; i <= n; i++) {
+            sum = sum + i;
+        }
+
+        return sum;
+    }
+
+    let sum = getSum(100);
+    alert(sum);
+
+
+</script>
+</html>
