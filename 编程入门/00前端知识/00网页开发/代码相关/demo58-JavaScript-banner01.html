@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+
+        .banner {
+            width: 640px;
+            height: 320px;
+            display: block;
+            margin: 100px auto;
+        }
+
+    </style>
 </head>
 <body>
 
+<img class="banner" src="imgs/img-accordion/img1.jpg"/>
+
 </body>
-<script >
+<script>
 
+    /*
 
+      闪动轮播
 
+     */
 
+    let  banner = document.querySelector(".banner");
+
+    // 定义图片路径数组
+    let  imgs =["imgs/img-accordion/img1.jpg","imgs/img-accordion/img2.jpg","imgs/img-accordion/img3.jpg","imgs/img-accordion/img4.jpg","imgs/img-accordion/img5.jpg"];
+
+    //当前的索引
+    let  currIndex = 0;
+
+    //每隔一秒换一张图片
+    setInterval(function(){
+
+        if(currIndex === imgs.length){
+            // 超出数组范围，重置到 0
+            currIndex = 0;
+        }
+        //currIndex++ ：每次自己加一
+        //关于currIndex++ 和 ++currIndex区别，自行搜索学习一下。
+        banner.src=imgs[currIndex++];
+
+    },1000);
 
 
 </script>

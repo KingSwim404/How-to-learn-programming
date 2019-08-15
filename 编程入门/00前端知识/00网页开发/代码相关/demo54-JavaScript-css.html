@@ -3,16 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+        #div1{
+
+            width: 200px;
+            height: 100px;
+            background-color: #00FF00;
+        }
+
+    </style>
 </head>
 <body>
+
+<div id="div0"></div>
+
+<div id="div1"></div>
+
+<img id="img0"  />
+
 
 </body>
 <script >
 
+    //如何用js设置CSS：
+    let div0 = document.querySelector("#div0");
+       div0.style.width = "100px";
+       div0.style.height = "100px";
+       //css里面的中划线都要传化成首字母大写
+       //background-color 转化为：backgroundColor
+       div0.style.backgroundColor = "blue";
+
+    //如何用js获取CSS：（和你想的不一样，但是你记住使用就好）
+
+    let div1 = document.querySelector("#div1");
+    let width =  getComputedStyle(div1).width ;
+    //另一种写法：let width =  getComputedStyle(div1)["width"] ;
+    alert(width);//200px
+
+    //如何转化为可以计算的数值 200
+    let wtNum = parseInt(width); //parseInt去掉所有非数值的字母。
+    alert(wtNum);//200
 
 
+    //如何用js设置图片
+    let img0 = document.querySelector("#img0");
+    img0.src = "imgs/kingswim.png";
 
-
+    
 
 </script>
 </html>

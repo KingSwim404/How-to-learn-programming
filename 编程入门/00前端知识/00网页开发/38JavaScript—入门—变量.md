@@ -26,7 +26,7 @@
 
   1. 变量表示：
   
-     [示例详细代码47](代码相关/demo47-JavaScript-location.html)
+     [示例详细代码47](代码相关/demo47-JavaScript-variable.html)
   
    - 如何表示一个数值
   
@@ -143,5 +143,7 @@
          
      ```
   
-  
+- ### 自练习
+
+  熟悉谷歌浏览器控制台的用法。尽量使用console.log()打印数据内容。
 

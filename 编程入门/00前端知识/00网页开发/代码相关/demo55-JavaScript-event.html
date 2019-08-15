@@ -3,15 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+        #div0{
+            width: 200px;
+            height: 200px;
+            background-color: #0000FF;
+        }
+
+
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+
+    </style>
 </head>
 <body>
 
+<div id="div0"></div>
+
+
+<div id="div1"></div>
+
 </body>
 <script >
+    //1、监听鼠标点击事件
+    let div0 = document.querySelector("#div0");
+
+    div0.addEventListener("click",function (event) {
+         alert("我被点击了~~~");
+    });
+
+    //2、监听鼠标滑过事件：模拟CSS的hover。
+
+    let div1 = document.querySelector("#div1");
 
 
+    //鼠标滑入
+    div1.addEventListener("mouseenter",function (event) {
+        div1.style.backgroundColor = "yellow";
+    });
+
+    //鼠标滑出
+    div1.addEventListener("mouseleave",function (event) {
+        div1.style.backgroundColor = "blue";
+    });
 
 
+    /*
+     js里面还有很多事件监听，想要继续学习的可以，通过搜索自学一下。
+    */
 
 
 </script>

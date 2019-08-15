@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style >
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner {
+            margin: 100px auto;
+            width: 640px;
+            height: 320px;
+            /* 去掉标签换行造成的空隙 */
+            font-size: 0;
+            /* 超出范围隐藏掉 */
+            overflow: hidden;
+        }
+
+        .banner .imgs {
+            width: 3840px;
+            height: 320px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <div class="imgs">
+        <img src="imgs/img-accordion/img1.jpg"/>
+        <img src="imgs/img-accordion/img2.jpg"/>
+        <img src="imgs/img-accordion/img3.jpg"/>
+        <img src="imgs/img-accordion/img4.jpg"/>
+        <img src="imgs/img-accordion/img5.jpg"/>
+        <img src="imgs/img-accordion/img1.jpg"/>
+    </div>
+</div>
+
+</body>
+<script>
+
+      /*
+        连动轮播
+       */
+      //所有图片容器
+      let imgs = document.querySelector(".banner .imgs");
+      //图片总数
+      let imgsCount=document.querySelectorAll(".banner .imgs>img").length;
+      //移动距离
+      let distance = 0;
+      //图片总宽度
+      let imgsWidth = parseInt(getComputedStyle(imgs).width);
+      //可移动到左边的最大距离: n-1张图片宽度
+      let leftMaxDistance = (imgsWidth / imgsCount) * (imgsCount - 1);
+
+      //开始轮播：20毫秒一次，每次左移5px。
+      let time =20;
+      let step = 2;
+
+      setInterval(function() {
+
+          if (Math.abs(distance) >= leftMaxDistance) {
+              //到了最左边,需要还原
+              distance = 0;
+          }
+          imgs.style.transform = "translateX("+ (distance = distance - step) +"px)";
+
+      }, time);
+
+
+</script>
+</html>

@@ -3,16 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #div0 {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: blue;
+        }
+
+        #btn {
+            width: 100px;
+            display: block;
+            margin: 10px auto;
+        }
+
+    </style>
 </head>
 <body>
 
+<div id="div0">
+
+</div>
+
+<button id="btn">启动</button>
+
 </body>
-<script >
+<script>
 
+    /*
+       用 js 实现一个平移动画：
+     */
 
+    let btn = document.querySelector("#btn");
+    let div0 = document.querySelector("#div0");
 
+    let isRun = false; //动画是否启动
 
+    let interval= null;
 
+    btn.addEventListener("click", function () {
+        //取反
+        isRun =!isRun;
+        if (isRun) {
+            //启动
+            interval = translateX(div0,400);
+            btn.innerText = "暂停";
+        } else {
+            //暂停
+            clearInterval(interval);
+            btn.innerText = "启动";
+        }
+        
+    });
+
+    /**
+     *
+     * @param ele
+     *        需要执行的标签
+     * @param distance
+     *        移动的距离
+     * @returns
+     *         执行器
+     */
+    function translateX(ele,distance) {
+        let step = 0;//总步长
+        let part = distance/100.0 ; //单位步长
+        let interval = setInterval(function () {
+             //分为 100 次
+             step = step + part;//
+             ele.style.transform = "translateX("+step+"px)";
+             if(step>=Math.abs(distance)){
+                 clearInterval(interval);
+                 //还原
+                 ele.style.transform = "translateX(0px)";
+                 btn.innerText = "启动";
+                 isRun = false;
+             }
+        },16);
+        //将执行器返回出去方便控制暂停。
+        return interval;
+    }
 
 </script>
 </html>

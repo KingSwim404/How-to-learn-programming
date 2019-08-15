@@ -7,11 +7,35 @@
 <body>
 
 </body>
-<script >
+<script>
+
+    /*
+     1、延时多久做一件事情——只做一次
+
+      setTimeout( 需要执行的方法 , 时间-单位毫秒 );
+     */
+    console.log("开始~~~");
+    let time = setTimeout(function () {
+        console.log("3秒后~~~");
+    }, 3000);
+
+    // 如何半路取消延时器
+    // clearTimeout(time);
+
+    /*
+     1、间隔多久重复执行一件事——不断重复
+       setInterval( 需要执行的方法 , 时间-单位毫秒 );
+     */
+
+     let interval = setInterval(function () {
+
+         console.log("interval~~");
+
+     },3000);
 
 
-
-
+    //  这是一个死循环，如何取消
+    //  clearInterval(interval);
 
 
 </script>
