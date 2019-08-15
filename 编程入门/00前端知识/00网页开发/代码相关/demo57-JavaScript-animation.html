@@ -21,10 +21,7 @@
 </head>
 <body>
 
-<div id="div0">
-
-</div>
-
+<div id="div0"></div>
 <button id="btn">启动</button>
 
 </body>
@@ -45,7 +42,7 @@
         //取反
         isRun =!isRun;
         if (isRun) {
-            //启动
+            //启动平移动画
             interval = translateX(div0,400);
             btn.innerText = "暂停";
         } else {
@@ -66,13 +63,15 @@
      *         执行器
      */
     function translateX(ele,distance) {
-        let step = 0;//总步长
+        let totalStep = 0;//总步长
         let part = distance/100.0 ; //单位步长
         let interval = setInterval(function () {
              //分为 100 次
-             step = step + part;//
-             ele.style.transform = "translateX("+step+"px)";
-             if(step>=Math.abs(distance)){
+             totalStep = totalStep + part;//
+             ele.style.transform = "translateX("+totalStep+"px)";
+             // Math.abs() 求绝对值。
+             if(totalStep >= Math.abs(distance)){
+                 //当走到的总步数大于等于目标距离，关掉移动动画
                  clearInterval(interval);
                  //还原
                  ele.style.transform = "translateX(0px)";

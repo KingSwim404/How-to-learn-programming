@@ -10,7 +10,7 @@
 <script>
 
     /*
-     1、延时多久做一件事情——只做一次
+     1、间隔一段时间后，再做一件事情——做且只做一次
 
       setTimeout( 需要执行的方法 , 时间-单位毫秒 );
      */
@@ -23,11 +23,12 @@
     // clearTimeout(time);
 
     /*
-     1、间隔多久重复执行一件事——不断重复
+     2、 每隔一段时间后，做同一件事情——不断重复
        setInterval( 需要执行的方法 , 时间-单位毫秒 );
      */
 
      let interval = setInterval(function () {
+
 
          console.log("interval~~");
 

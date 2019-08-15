@@ -2,7 +2,7 @@
 
 [示例详细代码54](代码相关/demo54-JavaScript-css.html)
 
-- ### HTML 代码
+- ### HTML 代码：
 
   ```html
   <style>
@@ -22,7 +22,7 @@
 
   
 
-- ### JavaScript 设置 CSS
+- ### JavaScript 设置 CSS：
 
   ```javascript
    let div0 = document.querySelector("#div0");
@@ -35,7 +35,7 @@
 
   
 
-- ### JavaScript 获取 CSS
+- ### JavaScript 获取 CSS：
 
   ```javascript
   let div1 = document.querySelector("#div1");
@@ -50,7 +50,7 @@
 
   
 
-- ### JavaScript 设置 图片
+- ### JavaScript 设置 图片：
 
   ```javascript
   let img0 = document.querySelector("#img0");
