@@ -56,12 +56,12 @@
       let imgsCount=document.querySelectorAll(".banner .imgs>img").length;
       //移动距离
       let distance = 0;
-      //图片总宽度
+      //获取图片总宽度
       let imgsWidth = parseInt(getComputedStyle(imgs).width);
       //可移动到左边的最大距离: n-1张图片宽度
       let leftMaxDistance = (imgsWidth / imgsCount) * (imgsCount - 1);
 
-      //开始轮播：20毫秒一次，每次左移5px。
+      //开始轮播：20毫秒一次，每次左移2px。
       let time =20;
       let step = 2;
 
