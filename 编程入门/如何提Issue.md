@@ -27,16 +27,16 @@
    ```html
    1、问题代码项目地址：https://github.com/KingSwim404/sample-of-HTLP-issue
    
-   2、问题代码文件路径：./index.html      (./代表根目录)
+   2、问题代码文件路径：./index.html
    
    3、具体问题代码如下：
       .div01:hover{
             background: red;
         }
    
-4、具体问题描述如下：
+   4、具体问题描述如下：
       hover的时候，背景没有变化；
-```
+   ```
    
    
    
