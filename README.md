@@ -98,6 +98,8 @@
 
   官方唯一指定交流社区(免费);审核通过条件:需在[软件工程师宣言](https://github.com/KingSwim404/software-engineer-manifesto)上签名成功。
   
+  注意:记得加入星球时，备注你的github信息方便审核。
+  
   <img src="imgs/zsxq/xbc.png" width="200" style="width:200px; float:left;"/>
   
   
