@@ -94,7 +94,7 @@
 
 - 邮箱：kingswim404@gmail.com
 
-  学习教程中遇到问题，请提[issue](https://github.com/KingSwim404/How-to-learn-programming/issues)
+  教程中的问题，请提[issue](https://github.com/KingSwim404/How-to-learn-programming/issues)
 
   官方唯一指定交流社区(免费——但是限人数);
   
