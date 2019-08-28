@@ -16,15 +16,27 @@
 
   另外，哪怕突然有一天这些基础知识也完全过时了，如何快速去学习一门课程的经验还是很有用的。
 
-  于是，就诞生了这个教程。
+  于是，就想写一个多种技术入门的教程；但是，一直都未付出行动。
+  
+  如果，你是我曾经的学生，应该知道我拖得有点久了（笑）。
 
-  此想法早就有之；但是，真正付出行动近期才开始。
-  
-  感谢以下大佬对我的影响，强烈建议大家关注一下他们的公众号。
-  
-  排名不分先后：[公众号链接](https://www.kingswim.xyz/#/weChat)
-  
   最后：希望这个教程对你有用。
+
+  同时，感谢以下大佬对我的影响，排名不分先后:
+  
+  [连岳(微博)](https://weibo.com/lianyue)     
+  
+  [Fenng(微博)](https://weibo.com/fenng)
+  
+  [MacTalk(微博)](https://weibo.com/idreamland?is_all=1)
+  
+  [caoz(微博)](https://weibo.com/caoz?is_all=1)
+  
+  [stormzhang(微博)](https://weibo.com/zhangqi8?is_all=1)
+  
+  
+  强烈建议,大家关注他们的公众号——[公众号链接](https://www.kingswim.xyz/#/weChat)
+  
 
 ## 二、会涉及到的方向：
 
