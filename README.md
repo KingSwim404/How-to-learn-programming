@@ -120,7 +120,7 @@
   
     <img src="imgs/KingSwim404.png" width="200" style="width:200px; float:left;"/>
     
-  - 和KingSwim一起学编程—学习数据统计
+  - [教程学习数据统计](数据统计.md)
   
     
   
