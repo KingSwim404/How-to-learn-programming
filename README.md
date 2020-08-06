@@ -1,4 +1,4 @@
-# How-to-learn-programming
+# How-to-learn-programming（人人都可以看懂的编程入门手册）
 
 ## 一、想要达到的目的：
 
