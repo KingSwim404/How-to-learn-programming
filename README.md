@@ -110,7 +110,7 @@
 
   官方唯一指定交流社区(免费——但是限人数);
   
-  <img src="imgs/zsxq/xbc.png" width="200" style="width:200px; float:left;"/>
+  <img src="https://kingswim.xyz/warehouse/zsxq/xbc.png" width="200" style="width:200px; float:left;"/>
   
   星球规则暂定如下：
   
