@@ -132,7 +132,7 @@
     
     具体时间会优先发布于：[教程学习数据统计及其计划](数据统计.md)；有调整也会在下面的公众号里发布通知。
   
-    <img src="imgs/KingSwim404.png" width="200" style="width:200px; float:left;"/>
+    <img src="https://kingswim.xyz/warehouse/KingSwim404.png" width="200" style="width:200px; float:left;"/>
   
     
   
