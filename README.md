@@ -20,8 +20,7 @@
   
   同时，感谢以下大佬对我的影响，排名不分先后:
 
-  
-建议大家关注他们的公众号——[公众号链接](https://www.kingswim.xyz/#/weChat)
+  建议大家关注他们的公众号——[公众号链接](https://www.kingswim.xyz/#/weChat)
   
 
 ## 二、会涉及到的方向：
