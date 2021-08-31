@@ -36,12 +36,10 @@
 
     还有问题可以联系我：
  
-    邮箱：kingswim404@gmail.com
+    邮箱: kingswim404@gmail.com
   
-   官方唯一指定交流社区(免费——但是限人数);
+    微信: KingSwim613
 
- <img src="https://kingswim.xyz/warehouse/zsxq/xbc.png" width="200" style="width:200px;"/>
-  
 ## 四、如何使用这个教程：
 
 - 不要仅仅阅读教程，一定要要手敲、要实践；
